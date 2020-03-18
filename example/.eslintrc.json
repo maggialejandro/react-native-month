@@ -1,0 +1,6 @@
+{
+  "extends": "../.eslintrc.json",
+  "settings": {
+    "import/core-modules": ["react-native-month"]
+  }
+}
