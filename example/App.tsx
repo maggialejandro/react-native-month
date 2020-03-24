@@ -60,10 +60,10 @@ export default class App extends React.PureComponent<Props, State> {
   state = {
     disableRange: false,
     offsets: false,
-    startDate: new Date(),
-    endDate: undefined,
-    minDate: new Date(2020, 2, 4),
-    maxDate: new Date(2020, 2, 28),
+    startDate: new Date(2020, 2, 11),
+    endDate: new Date(2020, 2, 12),
+    minDate: new Date(2020, 2, 6),
+    maxDate: new Date(2020, 2, 20),
   };
 
   handlePress = (date: Date) => {

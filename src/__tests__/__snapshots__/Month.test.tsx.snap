@@ -776,7 +776,7 @@ Array [
               "color": "black",
             },
             undefined,
-            undefined,
+            Object {},
             Object {},
           ]
         }
@@ -1006,7 +1006,7 @@ Array [
               "color": "black",
             },
             undefined,
-            Object {},
+            undefined,
             Object {},
           ]
         }
@@ -1334,6 +1334,10 @@ Array [
           Object {},
           Object {},
           Object {},
+          Object {},
+          Object {},
+          Object {},
+          Object {},
         ]
       }
     >
@@ -1365,6 +1369,10 @@ Array [
           },
           undefined,
           undefined,
+          Object {},
+          Object {},
+          Object {},
+          Object {},
           Object {},
           Object {},
           Object {},
@@ -1404,6 +1412,10 @@ Array [
           Object {},
           Object {},
           Object {},
+          Object {},
+          Object {},
+          Object {},
+          Object {},
         ]
       }
     >
@@ -1435,6 +1447,10 @@ Array [
           },
           undefined,
           undefined,
+          Object {},
+          Object {},
+          Object {},
+          Object {},
           Object {},
           Object {},
           Object {},
@@ -1617,6 +1633,10 @@ Array [
           Object {},
           Object {},
           Object {},
+          Object {},
+          Object {},
+          Object {},
+          Object {},
         ]
       }
     >
@@ -1648,6 +1668,10 @@ Array [
           },
           undefined,
           undefined,
+          Object {},
+          Object {},
+          Object {},
+          Object {},
           Object {},
           Object {},
           Object {},
@@ -1687,6 +1711,10 @@ Array [
           Object {},
           Object {},
           Object {},
+          Object {},
+          Object {},
+          Object {},
+          Object {},
         ]
       }
     >
@@ -1718,6 +1746,10 @@ Array [
           },
           undefined,
           undefined,
+          Object {},
+          Object {},
+          Object {},
+          Object {},
           Object {},
           Object {},
           Object {},
@@ -1757,6 +1789,10 @@ Array [
           Object {},
           Object {},
           Object {},
+          Object {},
+          Object {},
+          Object {},
+          Object {},
         ]
       }
     >
@@ -1788,6 +1824,10 @@ Array [
           },
           undefined,
           undefined,
+          Object {},
+          Object {},
+          Object {},
+          Object {},
           Object {},
           Object {},
           Object {},
@@ -2456,7 +2496,7 @@ Array [
               "color": "black",
             },
             undefined,
-            undefined,
+            Object {},
             Object {},
           ]
         }
@@ -2686,7 +2726,7 @@ Array [
               "color": "black",
             },
             undefined,
-            Object {},
+            undefined,
             Object {},
           ]
         }
@@ -3014,6 +3054,10 @@ Array [
           Object {},
           Object {},
           Object {},
+          Object {},
+          Object {},
+          Object {},
+          Object {},
         ]
       }
     >
@@ -3045,6 +3089,10 @@ Array [
           },
           undefined,
           undefined,
+          Object {},
+          Object {},
+          Object {},
+          Object {},
           Object {},
           Object {},
           Object {},
@@ -3084,6 +3132,10 @@ Array [
           Object {},
           Object {},
           Object {},
+          Object {},
+          Object {},
+          Object {},
+          Object {},
         ]
       }
     >
@@ -3119,6 +3171,10 @@ Array [
           Object {},
           Object {},
           Object {},
+          Object {},
+          Object {},
+          Object {},
+          Object {},
         ]
       }
     >
@@ -3150,6 +3206,10 @@ Array [
           },
           undefined,
           undefined,
+          Object {},
+          Object {},
+          Object {},
+          Object {},
           Object {},
           Object {},
           Object {},
@@ -3332,6 +3392,10 @@ Array [
           Object {},
           Object {},
           Object {},
+          Object {},
+          Object {},
+          Object {},
+          Object {},
         ]
       }
     >
@@ -3363,6 +3427,10 @@ Array [
           },
           undefined,
           undefined,
+          Object {},
+          Object {},
+          Object {},
+          Object {},
           Object {},
           Object {},
           Object {},
@@ -3402,6 +3470,10 @@ Array [
           Object {},
           Object {},
           Object {},
+          Object {},
+          Object {},
+          Object {},
+          Object {},
         ]
       }
     >
@@ -3433,6 +3505,10 @@ Array [
           },
           undefined,
           undefined,
+          Object {},
+          Object {},
+          Object {},
+          Object {},
           Object {},
           Object {},
           Object {},
@@ -3472,6 +3548,10 @@ Array [
           Object {},
           Object {},
           Object {},
+          Object {},
+          Object {},
+          Object {},
+          Object {},
         ]
       }
     >
@@ -3503,6 +3583,10 @@ Array [
           },
           undefined,
           undefined,
+          Object {},
+          Object {},
+          Object {},
+          Object {},
           Object {},
           Object {},
           Object {},
@@ -4171,7 +4255,7 @@ Array [
               "color": "black",
             },
             undefined,
-            undefined,
+            Object {},
             Object {},
           ]
         }
@@ -4401,7 +4485,7 @@ Array [
               "color": "black",
             },
             undefined,
-            Object {},
+            undefined,
             Object {},
           ]
         }
@@ -4729,6 +4813,10 @@ Array [
           Object {},
           Object {},
           Object {},
+          Object {},
+          Object {},
+          Object {},
+          Object {},
         ]
       }
     >
@@ -4760,6 +4848,10 @@ Array [
           },
           undefined,
           undefined,
+          Object {},
+          Object {},
+          Object {},
+          Object {},
           Object {},
           Object {},
           Object {},
@@ -4799,6 +4891,10 @@ Array [
           Object {},
           Object {},
           Object {},
+          Object {},
+          Object {},
+          Object {},
+          Object {},
         ]
       }
     >
@@ -4834,6 +4930,10 @@ Array [
           Object {},
           Object {},
           Object {},
+          Object {},
+          Object {},
+          Object {},
+          Object {},
         ]
       }
     >
@@ -4865,6 +4965,10 @@ Array [
           },
           undefined,
           undefined,
+          Object {},
+          Object {},
+          Object {},
+          Object {},
           Object {},
           Object {},
           Object {},
@@ -4917,6 +5021,10 @@ Array [
           Object {},
           Object {},
           Object {},
+          Object {},
+          Object {},
+          Object {},
+          Object {},
         ]
       }
     >
@@ -4948,6 +5056,10 @@ Array [
           },
           undefined,
           undefined,
+          Object {},
+          Object {},
+          Object {},
+          Object {},
           Object {},
           Object {},
           Object {},
@@ -4987,6 +5099,10 @@ Array [
           Object {},
           Object {},
           Object {},
+          Object {},
+          Object {},
+          Object {},
+          Object {},
         ]
       }
     >
@@ -5018,6 +5134,10 @@ Array [
           },
           undefined,
           undefined,
+          Object {},
+          Object {},
+          Object {},
+          Object {},
           Object {},
           Object {},
           Object {},
@@ -5057,6 +5177,10 @@ Array [
           Object {},
           Object {},
           Object {},
+          Object {},
+          Object {},
+          Object {},
+          Object {},
         ]
       }
     >
@@ -5088,6 +5212,10 @@ Array [
           },
           undefined,
           undefined,
+          Object {},
+          Object {},
+          Object {},
+          Object {},
           Object {},
           Object {},
           Object {},
@@ -5756,7 +5884,7 @@ Array [
               "color": "black",
             },
             undefined,
-            undefined,
+            Object {},
             Object {},
           ]
         }
@@ -5986,7 +6114,7 @@ Array [
               "color": "black",
             },
             undefined,
-            Object {},
+            undefined,
             Object {},
           ]
         }
@@ -6314,6 +6442,10 @@ Array [
           Object {},
           Object {},
           Object {},
+          Object {},
+          Object {},
+          Object {},
+          Object {},
         ]
       }
     >
@@ -6345,6 +6477,10 @@ Array [
           },
           undefined,
           undefined,
+          Object {},
+          Object {},
+          Object {},
+          Object {},
           Object {},
           Object {},
           Object {},
@@ -6384,6 +6520,10 @@ Array [
           Object {},
           Object {},
           Object {},
+          Object {},
+          Object {},
+          Object {},
+          Object {},
         ]
       }
     >
@@ -6419,6 +6559,10 @@ Array [
           Object {},
           Object {},
           Object {},
+          Object {},
+          Object {},
+          Object {},
+          Object {},
         ]
       }
     >
@@ -6450,6 +6594,10 @@ Array [
           },
           undefined,
           undefined,
+          Object {},
+          Object {},
+          Object {},
+          Object {},
           Object {},
           Object {},
           Object {},

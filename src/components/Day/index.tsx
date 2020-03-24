@@ -28,6 +28,8 @@ interface NonTouchableDayProps {
   isActive: boolean;
   isMonthDate: boolean;
   isOutOfRange: boolean;
+  isStartDate: boolean;
+  isEndDate: boolean;
   isVisible: boolean;
   isToday: boolean;
   theme: ThemeType;
@@ -35,7 +37,16 @@ interface NonTouchableDayProps {
 
 const NonTouchableDay = React.memo<NonTouchableDayProps>(
   (props: NonTouchableDayProps) => {
-    const { isMonthDate, isActive, isOutOfRange, theme, date, isToday } = props;
+    const {
+      isMonthDate,
+      isActive,
+      isOutOfRange,
+      isStartDate,
+      isEndDate,
+      theme,
+      date,
+      isToday,
+    } = props;
 
     return (
       <View
@@ -47,6 +58,10 @@ const NonTouchableDay = React.memo<NonTouchableDayProps>(
           isActive ? styles.activeDate : {},
           isActive ? theme.activeDayContainerStyle : {},
           isOutOfRange ? theme.dayOutOfRangeContainerStyle : {},
+          isStartDate ? styles.startDate : {},
+          isStartDate ? theme.startDateContainerStyle : {},
+          isEndDate ? styles.endDate : {},
+          isEndDate ? theme.endDateContainerStyle : {},
         ]}
       >
         <Text
@@ -66,7 +81,9 @@ const NonTouchableDay = React.memo<NonTouchableDayProps>(
   (prevProps, nextProps) => {
     return (
       prevProps.isActive === nextProps.isActive &&
-      prevProps.isVisible === nextProps.isVisible
+      prevProps.isVisible === nextProps.isVisible &&
+      prevProps.isStartDate === nextProps.isStartDate &&
+      prevProps.isEndDate === nextProps.isEndDate
     );
   }
 );
@@ -107,6 +124,8 @@ const Day = React.memo<Props>(
           theme={theme}
           isMonthDate={isMonthDate}
           isOutOfRange={isOutOfRange}
+          isStartDate={isStartDate}
+          isEndDate={isEndDate}
           isVisible={isVisible}
           isToday={isToday}
         />

@@ -7,18 +7,6 @@ export function addDays(date: Date, days: number): Date {
   return result;
 }
 
-export function clearTime(date: Date) {
-  date.setHours(0);
-  date.setMinutes(0);
-  date.setSeconds(0);
-  date.setMilliseconds(0);
-  return date;
-}
-
-export function isDate(date: any) {
-  return date instanceof Date;
-}
-
 export function getNumberOfDaysInMonth(month: number, year: number) {
   switch (month) {
     case 0:

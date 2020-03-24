@@ -1,4 +1,4 @@
-import { addDays, getNumberOfDaysInMonth, clearTime } from '../utils/date';
+import { addDays, getNumberOfDaysInMonth } from '../utils/date';
 import { changedDate, sameDate } from '../utils/validations';
 import { MonthProps, DayType } from '../types';
 
@@ -12,7 +12,7 @@ function dayShouldBeActive(
   lastDayOfMonth: Date
 ) {
   if (date > lastDayOfMonth) {
-    return endDate > lastDayOfMonth && startDate < lastDayOfMonth;
+    return endDate > lastDayOfMonth && startDate <= lastDayOfMonth;
   }
 
   return startDate < firstDayOfMonth && endDate >= firstDayOfMonth;
@@ -30,11 +30,10 @@ export function getMonthDays(
   minDate?: Date,
   maxDate?: Date
 ): DayType[] {
-  const _minDate = minDate instanceof Date ? clearTime(minDate) : minDate;
-  const _maxDate = maxDate instanceof Date ? clearTime(maxDate) : maxDate;
-  const _startDate =
-    startDate instanceof Date ? clearTime(startDate) : startDate;
-  const _endDate = endDate instanceof Date ? clearTime(endDate) : endDate;
+  if (minDate instanceof Date) minDate.setHours(0, 0, 0, 0);
+  if (maxDate instanceof Date) maxDate.setHours(0, 0, 0, 0);
+  if (startDate instanceof Date) startDate.setHours(0, 0, 0, 0);
+  if (endDate instanceof Date) endDate.setHours(0, 0, 0, 0);
 
   const firstMonthDay = new Date(year, month, 1);
   const lastMonthDay = new Date(year, month + 1, 0);
@@ -56,42 +55,37 @@ export function getMonthDays(
     const fullMonth = month < 10 ? `0${month + 1}` : (month + 1).toString();
     const id = `${date.getFullYear()}-${fullMonth}-${fullDay}`;
 
-    let isOnSelectableRange = !_minDate && !_maxDate;
+    let isOnSelectableRange = !minDate && !maxDate;
 
     isOnSelectableRange =
-      (!_minDate || (_minDate && date >= _minDate)) &&
-      (!_maxDate || (_maxDate && date <= _maxDate));
+      (!minDate || (minDate && date >= minDate)) &&
+      (!maxDate || (maxDate && date <= maxDate));
 
     const isOutOfRange = !!(
-      (_minDate && date < _minDate) ||
-      (_maxDate && date > _maxDate)
+      (minDate && date < minDate) ||
+      (maxDate && date > maxDate)
     );
     const isMonthDate = i >= 0 && i < daysToAdd;
     let isStartDate = false;
     let isEndDate = false;
     let isActive = false;
 
-    if (_endDate && _startDate && !disableRange) {
-      isStartDate = isMonthDate && sameDate(date, _startDate);
-      isEndDate = isMonthDate && sameDate(date, _endDate);
+    if (endDate && startDate && !disableRange) {
+      isStartDate = isMonthDate && sameDate(date, startDate);
+      isEndDate = isMonthDate && sameDate(date, endDate);
 
       if (!isMonthDate) {
         isActive = dayShouldBeActive(
           date,
-          _startDate,
-          _endDate,
+          startDate,
+          endDate,
           firstMonthDay,
           lastMonthDay
         );
       } else {
-        isActive = date >= _startDate && date <= _endDate;
+        isActive = date >= startDate && date <= endDate;
       }
-    } else if (
-      isMonthDate &&
-      _startDate &&
-      sameDate(date, _startDate) &&
-      isOnSelectableRange
-    ) {
+    } else if (isMonthDate && startDate && sameDate(date, startDate)) {
       isStartDate = true;
       isEndDate = true;
       isActive = true;
