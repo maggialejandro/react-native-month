@@ -3265,10 +3265,10 @@ eslint-config-prettier@^6.7.0:
   dependencies:
     get-stdin "^6.0.0"
 
-eslint-config-satya164@3.1.5:
-  version "3.1.5"
-  resolved "https://registry.yarnpkg.com/eslint-config-satya164/-/eslint-config-satya164-3.1.5.tgz#52ef0cdbdf89a4bb1f2b2448081bacb45fbcd211"
-  integrity sha512-ZAVavXO6qY+11uUlsxsAp5a25GTWder/dU3RIO3cS8mzL3fFl5WrgtQ5W9B4iUwpooRMUY8w6V5yVtUs4dMnaA==
+eslint-config-satya164@3.1.6:
+  version "3.1.6"
+  resolved "https://registry.yarnpkg.com/eslint-config-satya164/-/eslint-config-satya164-3.1.6.tgz#f423cd24afc8396efad04b3b96d4d2458818a100"
+  integrity sha512-DkH/iJXZD+em0E6TAfK+Ey+y2miLBv5/1KC5Gf29IEfFxS0C3LCZsDGjPBR+vRZr2Pl/ELPjKu/cvmwReIwsHQ==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^2.12.0"
     "@typescript-eslint/parser" "^2.12.0"
