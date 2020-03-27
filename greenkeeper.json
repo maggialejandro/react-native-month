@@ -1,8 +1,0 @@
-{
-  "groups": {
-    "default": {
-      "packages": ["example/package.json", "package.json"]
-    }
-  },
-  "ignore": ["react-native", "react", "react-dom", "react-test-renderer"]
-}
