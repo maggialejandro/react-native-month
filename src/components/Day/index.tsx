@@ -58,10 +58,10 @@ const NonTouchableDay = React.memo<NonTouchableDayProps>(
           isActive ? styles.activeDate : {},
           isActive ? theme.activeDayContainerStyle : {},
           isOutOfRange ? theme.dayOutOfRangeContainerStyle : {},
-          isStartDate ? styles.startDate : {},
-          isStartDate ? theme.startDateContainerStyle : {},
           isEndDate ? styles.endDate : {},
           isEndDate ? theme.endDateContainerStyle : {},
+          isStartDate ? styles.startDate : {},
+          isStartDate ? theme.startDateContainerStyle : {},
         ]}
       >
         <Text
