@@ -3,7 +3,7 @@
 import { ComponentType } from 'react';
 import { ViewStyle, TextStyle } from 'react-native';
 
-export type LocaleType = 'es' | 'en' | 'fr' | 'br' | 'zh';
+export type LocaleType = 'es' | 'en' | 'fr' | 'br' | 'zh' | 'ko';
 
 interface DayTheme {
   activeDayColor?: string;
