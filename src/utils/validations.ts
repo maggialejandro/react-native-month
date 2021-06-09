@@ -1,3 +1,5 @@
+import { MarkedDays } from '../types';
+
 const MAX_DATE = new Date(8640000000000000);
 const MIN_DATE = new Date(-8640000000000000);
 
@@ -38,4 +40,11 @@ export function changedDate(one?: Date, other?: Date) {
     one instanceof Date !== other instanceof Date ||
     (one instanceof Date && other instanceof Date && !sameDate(one, other))
   );
+}
+
+export function changeMarkedDays(
+  markedDays: MarkedDays = {},
+  nextMarkedDays: MarkedDays = {}
+) {
+  return Object.keys(markedDays).length !== Object.keys(nextMarkedDays).length;
 }

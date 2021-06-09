@@ -22,6 +22,7 @@ export default React.memo<MonthProps>((props: MonthProps) => {
     endDate,
     minDate,
     maxDate,
+    markedDays = {},
     theme = {},
     renderDayContent,
   } = props;
@@ -57,8 +58,9 @@ export default React.memo<MonthProps>((props: MonthProps) => {
         <View key={String(index)} style={{ flexDirection: 'row' }}>
           {week.map((day: DayType) => (
             <Day
-              key={day.id}
+              key={day.key}
               item={day}
+              dots={markedDays[day.id] ? markedDays[day.id].dots : []}
               onPress={onPress}
               theme={theme}
               renderDayContent={renderDayContent}

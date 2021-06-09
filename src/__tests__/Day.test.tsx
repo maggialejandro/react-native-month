@@ -5,6 +5,7 @@ import Day from '../components/Day';
 
 const defaultDay = {
   id: '1',
+  key: '1-1',
   date: new Date(),
   isToday: false,
   isActive: false,
