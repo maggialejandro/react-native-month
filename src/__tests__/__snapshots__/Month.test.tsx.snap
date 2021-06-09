@@ -175,6 +175,15 @@ Array [
       >
         1
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -212,6 +221,15 @@ Array [
       >
         2
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -249,6 +267,15 @@ Array [
       >
         3
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -286,6 +313,15 @@ Array [
       >
         4
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -323,6 +359,15 @@ Array [
       >
         5
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -360,6 +405,15 @@ Array [
       >
         6
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -397,6 +451,15 @@ Array [
       >
         7
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
   </View>,
   <View
@@ -442,6 +505,15 @@ Array [
       >
         8
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -479,6 +551,15 @@ Array [
       >
         9
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -516,6 +597,15 @@ Array [
       >
         10
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -553,6 +643,15 @@ Array [
       >
         11
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -590,6 +689,15 @@ Array [
       >
         12
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -627,6 +735,15 @@ Array [
       >
         13
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -664,6 +781,15 @@ Array [
       >
         14
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
   </View>,
   <View
@@ -709,6 +835,15 @@ Array [
       >
         15
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -746,6 +881,15 @@ Array [
       >
         16
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -783,6 +927,15 @@ Array [
       >
         17
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -820,6 +973,15 @@ Array [
       >
         18
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -857,6 +1019,15 @@ Array [
       >
         19
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -894,6 +1065,15 @@ Array [
       >
         20
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -931,6 +1111,15 @@ Array [
       >
         21
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
   </View>,
   <View
@@ -976,6 +1165,15 @@ Array [
       >
         22
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -1013,6 +1211,15 @@ Array [
       >
         23
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -1050,6 +1257,15 @@ Array [
       >
         24
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -1087,6 +1303,15 @@ Array [
       >
         25
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -1124,6 +1349,15 @@ Array [
       >
         26
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -1161,6 +1395,15 @@ Array [
       >
         27
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -1198,6 +1441,15 @@ Array [
       >
         28
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
   </View>,
   <View
@@ -1243,6 +1495,15 @@ Array [
       >
         29
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -1273,13 +1534,22 @@ Array [
               "color": "black",
             },
             undefined,
-            undefined,
+            Object {},
             Object {},
           ]
         }
       >
         30
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -1317,6 +1587,15 @@ Array [
       >
         31
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       style={
@@ -1887,6 +2166,15 @@ Array [
       >
         1
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
   </View>,
   <View
@@ -1932,6 +2220,15 @@ Array [
       >
         2
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -1969,6 +2266,15 @@ Array [
       >
         3
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -2006,6 +2312,15 @@ Array [
       >
         4
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -2043,6 +2358,15 @@ Array [
       >
         5
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -2080,6 +2404,15 @@ Array [
       >
         6
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -2117,6 +2450,15 @@ Array [
       >
         7
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -2154,6 +2496,15 @@ Array [
       >
         8
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
   </View>,
   <View
@@ -2199,6 +2550,15 @@ Array [
       >
         9
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -2236,6 +2596,15 @@ Array [
       >
         10
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -2273,6 +2642,15 @@ Array [
       >
         11
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -2310,6 +2688,15 @@ Array [
       >
         12
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -2347,6 +2734,15 @@ Array [
       >
         13
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -2384,6 +2780,15 @@ Array [
       >
         14
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -2421,6 +2826,15 @@ Array [
       >
         15
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
   </View>,
   <View
@@ -2466,6 +2880,15 @@ Array [
       >
         16
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -2503,6 +2926,15 @@ Array [
       >
         17
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -2540,6 +2972,15 @@ Array [
       >
         18
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -2577,6 +3018,15 @@ Array [
       >
         19
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -2614,6 +3064,15 @@ Array [
       >
         20
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -2651,6 +3110,15 @@ Array [
       >
         21
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -2688,6 +3156,15 @@ Array [
       >
         22
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
   </View>,
   <View
@@ -2733,6 +3210,15 @@ Array [
       >
         23
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -2770,6 +3256,15 @@ Array [
       >
         24
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -2807,6 +3302,15 @@ Array [
       >
         25
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -2844,6 +3348,15 @@ Array [
       >
         26
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -2881,6 +3394,15 @@ Array [
       >
         27
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -2918,6 +3440,15 @@ Array [
       >
         28
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -2955,6 +3486,15 @@ Array [
       >
         29
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
   </View>,
   <View
@@ -2993,13 +3533,22 @@ Array [
               "color": "black",
             },
             undefined,
-            undefined,
+            Object {},
             Object {},
           ]
         }
       >
         30
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -3037,6 +3586,15 @@ Array [
       >
         31
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       style={
@@ -3646,6 +4204,15 @@ Array [
       >
         1
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
   </View>,
   <View
@@ -3691,6 +4258,15 @@ Array [
       >
         2
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -3728,6 +4304,15 @@ Array [
       >
         3
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -3765,6 +4350,15 @@ Array [
       >
         4
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -3802,6 +4396,15 @@ Array [
       >
         5
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -3839,6 +4442,15 @@ Array [
       >
         6
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -3876,6 +4488,15 @@ Array [
       >
         7
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -3913,6 +4534,15 @@ Array [
       >
         8
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
   </View>,
   <View
@@ -3958,6 +4588,15 @@ Array [
       >
         9
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -3995,6 +4634,15 @@ Array [
       >
         10
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -4032,6 +4680,15 @@ Array [
       >
         11
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -4069,6 +4726,15 @@ Array [
       >
         12
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -4106,6 +4772,15 @@ Array [
       >
         13
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -4143,6 +4818,15 @@ Array [
       >
         14
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -4180,6 +4864,15 @@ Array [
       >
         15
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
   </View>,
   <View
@@ -4225,6 +4918,15 @@ Array [
       >
         16
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -4262,6 +4964,15 @@ Array [
       >
         17
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -4299,6 +5010,15 @@ Array [
       >
         18
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -4336,6 +5056,15 @@ Array [
       >
         19
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -4373,6 +5102,15 @@ Array [
       >
         20
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -4410,6 +5148,15 @@ Array [
       >
         21
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -4447,6 +5194,15 @@ Array [
       >
         22
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
   </View>,
   <View
@@ -4492,6 +5248,15 @@ Array [
       >
         23
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -4529,6 +5294,15 @@ Array [
       >
         24
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -4566,6 +5340,15 @@ Array [
       >
         25
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -4603,6 +5386,15 @@ Array [
       >
         26
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -4640,6 +5432,15 @@ Array [
       >
         27
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -4677,6 +5478,15 @@ Array [
       >
         28
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -4714,6 +5524,15 @@ Array [
       >
         29
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
   </View>,
   <View
@@ -4752,13 +5571,22 @@ Array [
               "color": "black",
             },
             undefined,
-            undefined,
+            Object {},
             Object {},
           ]
         }
       >
         30
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -4796,6 +5624,15 @@ Array [
       >
         31
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       style={
@@ -5275,6 +6112,15 @@ Array [
       >
         1
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
   </View>,
   <View
@@ -5320,6 +6166,15 @@ Array [
       >
         2
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -5357,6 +6212,15 @@ Array [
       >
         3
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -5394,6 +6258,15 @@ Array [
       >
         4
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -5431,6 +6304,15 @@ Array [
       >
         5
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -5468,6 +6350,15 @@ Array [
       >
         6
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -5505,6 +6396,15 @@ Array [
       >
         7
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -5542,6 +6442,15 @@ Array [
       >
         8
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
   </View>,
   <View
@@ -5587,6 +6496,15 @@ Array [
       >
         9
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -5624,6 +6542,15 @@ Array [
       >
         10
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -5661,6 +6588,15 @@ Array [
       >
         11
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -5698,6 +6634,15 @@ Array [
       >
         12
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -5735,6 +6680,15 @@ Array [
       >
         13
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -5772,6 +6726,15 @@ Array [
       >
         14
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -5809,6 +6772,15 @@ Array [
       >
         15
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
   </View>,
   <View
@@ -5854,6 +6826,15 @@ Array [
       >
         16
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -5891,6 +6872,15 @@ Array [
       >
         17
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -5928,6 +6918,15 @@ Array [
       >
         18
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -5965,6 +6964,15 @@ Array [
       >
         19
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -6002,6 +7010,15 @@ Array [
       >
         20
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -6039,6 +7056,15 @@ Array [
       >
         21
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -6076,6 +7102,15 @@ Array [
       >
         22
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
   </View>,
   <View
@@ -6121,6 +7156,15 @@ Array [
       >
         23
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -6158,6 +7202,15 @@ Array [
       >
         24
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -6195,6 +7248,15 @@ Array [
       >
         25
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -6232,6 +7294,15 @@ Array [
       >
         26
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -6269,6 +7340,15 @@ Array [
       >
         27
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -6306,6 +7386,15 @@ Array [
       >
         28
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -6343,6 +7432,15 @@ Array [
       >
         29
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
   </View>,
   <View
@@ -6381,13 +7479,22 @@ Array [
               "color": "black",
             },
             undefined,
-            undefined,
+            Object {},
             Object {},
           ]
         }
       >
         30
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       accessible={true}
@@ -6425,6 +7532,15 @@ Array [
       >
         31
       </Text>
+      <View
+        style={
+          Object {
+            "bottom": 3,
+            "flexDirection": "row",
+            "position": "absolute",
+          }
+        }
+      />
     </View>
     <View
       style={

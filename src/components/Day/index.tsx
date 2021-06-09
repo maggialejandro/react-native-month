@@ -1,6 +1,7 @@
 import React, { ComponentType } from 'react';
 import { StyleSheet, TouchableOpacity, View, Text } from 'react-native';
-import { DayType, ThemeType } from '../../types';
+import { DayType, ThemeType, DayDot } from '../../types';
+import Dot from '../Dot';
 
 const styles = StyleSheet.create({
   activeDate: {
@@ -90,6 +91,7 @@ const NonTouchableDay = React.memo<NonTouchableDayProps>(
 
 interface Props {
   onPress: (date: Date) => void;
+  dots?: DayDot[];
   item: DayType;
   theme: ThemeType;
   renderDayContent?: (day: DayType) => ComponentType;
@@ -109,6 +111,7 @@ const Day = React.memo<Props>(
         isToday,
         isHidden,
       },
+      dots = [],
       theme,
     } = props;
 
@@ -132,6 +135,9 @@ const Day = React.memo<Props>(
       );
     }
 
+    // Should render a maximum of 3 dots
+    const finalDots = dots.slice(0, 3);
+
     return (
       <TouchableOpacity
         style={[
@@ -150,16 +156,31 @@ const Day = React.memo<Props>(
         {props.renderDayContent ? (
           props.renderDayContent(props.item)
         ) : (
-          <Text
-            style={[
-              { color: isActive ? 'white' : 'black' },
-              theme.dayTextStyle,
-              isToday ? theme.todayTextStyle : {},
-              isActive ? theme.activeDayTextStyle : {},
-            ]}
-          >
-            {date.getDate()}
-          </Text>
+          <>
+            <Text
+              style={[
+                { color: isActive ? 'white' : 'black' },
+                theme.dayTextStyle,
+                isToday ? theme.todayTextStyle : {},
+                isActive ? theme.activeDayTextStyle : {},
+              ]}
+            >
+              {date.getDate()}
+            </Text>
+            <View
+              style={{ position: 'absolute', bottom: 3, flexDirection: 'row' }}
+            >
+              {finalDots.map((d, i) => (
+                <Dot
+                  key={i.toString()}
+                  active={isActive}
+                  {...d}
+                  style={{ marginLeft: i === 0 ? 0 : 2 }}
+                  dotContainerStyle={theme.dotContainerStyle}
+                />
+              ))}
+            </View>
+          </>
         )}
       </TouchableOpacity>
     );

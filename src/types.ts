@@ -1,5 +1,3 @@
-/* eslint-disable flowtype/no-types-missing-file-annotation */
-
 import { ComponentType } from 'react';
 import { ViewStyle, TextStyle } from 'react-native';
 
@@ -22,15 +20,36 @@ interface DayTheme {
   todayTextStyle?: TextStyle;
 }
 
-export interface ThemeType extends DayTheme {
+export interface DotTheme {
+  dotContainerStyle?: ViewStyle;
+}
+
+export interface ThemeType extends DayTheme, DotTheme {
   weekColumnsContainerStyle?: ViewStyle;
   weekColumnStyle?: ViewStyle;
   weekColumnTextStyle?: TextStyle;
 }
 
+export type DayDot = {
+  /**
+   * Color used when the day is not selected
+   *
+   * @type {string}
+   */
+  color: string;
+
+  /**
+   * Color used when the day is selected
+   *
+   * @type {string}
+   */
+  selectedColor: string;
+};
+
 export type DayType = {
   date: Date;
   id: string;
+  key: string;
   isActive: boolean;
   isEndDate: boolean;
   isHidden: boolean;
@@ -40,6 +59,12 @@ export type DayType = {
   isToday: boolean;
   isVisible: boolean;
 };
+
+type MarkedDay = {
+  dots: DayDot[];
+};
+
+export type MarkedDays = Record<string, MarkedDay>;
 
 export interface MonthProps {
   /**
@@ -108,6 +133,7 @@ export interface MonthProps {
   endDate?: Date;
   minDate?: Date;
   maxDate?: Date;
+  markedDays?: MarkedDays;
   theme?: ThemeType;
   renderDayContent?: (day: DayType) => ComponentType;
   disabledDays?: { [key: string]: any };

@@ -1,4 +1,12 @@
-import { isDay, isMonth, isYear, sameDate, changedDate } from '../validations';
+import { MarkedDays } from '../../types';
+import {
+  isDay,
+  isMonth,
+  isYear,
+  sameDate,
+  changedDate,
+  changeMarkedDays,
+} from '../validations';
 
 describe('validations', () => {
   it('should validate a day number', () => {
@@ -38,5 +46,39 @@ describe('validations', () => {
     expect(changedDate(undefined, one)).toBe(true);
     expect(changedDate(one, one)).toBe(false);
     expect(changedDate(one, two)).toBe(true);
+  });
+
+  it('should validate adding a markedDay dot', () => {
+    const markedDays: MarkedDays = {
+      '2020-02-12': {
+        dots: [
+          {
+            color: 'red',
+            selectedColor: 'blue',
+          },
+        ],
+      },
+    };
+
+    const nextMarkedDays: MarkedDays = {
+      '2020-02-12': {
+        dots: [
+          {
+            color: 'red',
+            selectedColor: 'blue',
+          },
+        ],
+      },
+      '2020-02-13': {
+        dots: [
+          {
+            color: 'red',
+            selectedColor: 'blue',
+          },
+        ],
+      },
+    };
+
+    expect(changeMarkedDays(markedDays, nextMarkedDays)).toBe(true);
   });
 });

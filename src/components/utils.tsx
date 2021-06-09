@@ -1,5 +1,5 @@
 import { addDays, getNumberOfDaysInMonth } from '../utils/date';
-import { changedDate, sameDate } from '../utils/validations';
+import { changedDate, changeMarkedDays, sameDate } from '../utils/validations';
 import { MonthProps, DayType } from '../types';
 
 const MONDAY_FIRST = [6, 0, 1, 2, 3, 4, 5];
@@ -98,7 +98,8 @@ export function getMonthDays(
       year === today.getFullYear();
 
     days.push({
-      id: `${month}-${id}`,
+      key: `${month}-${id}`,
+      id: id,
       date,
       isToday,
       isMonthDate,
@@ -127,6 +128,7 @@ export function areEqual(prevProps: MonthProps, nextProps: MonthProps) {
     prevProps.disableRange === nextProps.disableRange &&
     prevProps.disableOffsetDays === nextProps.disableOffsetDays &&
     prevProps.firstDayMonday === nextProps.firstDayMonday &&
+    !changeMarkedDays(prevProps.markedDays, nextProps.markedDays) &&
     !changedDate(prevProps.startDate, nextProps.startDate) &&
     !changedDate(prevProps.endDate, nextProps.endDate) &&
     !changedDate(prevProps.minDate, nextProps.minDate) &&

@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StatusBar, SafeAreaView } from 'react-native';
-import { Month, ThemeType } from 'react-native-month';
+import { Month, ThemeType, MarkedDays } from 'react-native-month';
 
 const BLUE = '#6d95da';
 
@@ -43,6 +43,21 @@ const truthyValue = true;
 const DISABLED_DAYS = {
   '2020-03-20': truthyValue,
   '2020-03-10': truthyValue,
+};
+
+const markedDays: MarkedDays = {
+  '2020-03-12': {
+    dots: [
+      {
+        color: 'red',
+        selectedColor: 'green',
+      },
+      {
+        color: 'blue',
+        selectedColor: 'yellow',
+      },
+    ],
+  },
 };
 
 type Props = {};
@@ -117,6 +132,7 @@ export default class App extends React.PureComponent<Props, State> {
             firstDayMonday
             minDate={this.state.minDate}
             maxDate={this.state.maxDate}
+            markedDays={markedDays}
             disableRange={this.state.disableRange}
             startDate={this.state.startDate}
             endDate={this.state.endDate}
