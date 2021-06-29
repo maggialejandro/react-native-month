@@ -107,10 +107,7 @@ export function getMonthDays(
       isStartDate,
       isEndDate,
       isOutOfRange,
-      isVisible:
-        isOnSelectableRange &&
-        isMonthDate &&
-        !disabledDays[`${year}-${fullMonth}-${day}`],
+      isVisible: isOnSelectableRange && isMonthDate && !disabledDays[id],
       isHidden: disableOffsetDays && !isMonthDate,
     });
   }
