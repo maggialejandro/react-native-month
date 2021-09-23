@@ -1,7 +1,20 @@
 {
-  "extends": "satya164",
-  "plugins": ["react-native-globals"],
-  "env": {
-    "react-native-globals/all": true
+  "root": true,
+  "extends": [
+    "@react-native-community",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "tabWidth": 2,
+        "useTabs": false,
+        "avoidEscape": true,
+        "trailingComma": "es5",
+        "arrowParens": "always",
+        "singleQuote": true
+      }
+    ]
   }
 }
