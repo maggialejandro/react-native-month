@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { ThemeType } from '../../types';
 
 const SHOULD_NOT_UPDATE = true;
@@ -9,11 +9,19 @@ interface WeekColumnProps {
   theme: ThemeType;
 }
 
+const styles = StyleSheet.create({
+  weekColumnContainer: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  weekDaysContainer: {
+    flexDirection: 'row',
+  },
+});
+
 const WeekColumn = React.memo<WeekColumnProps>(
   (props: WeekColumnProps) => (
-    <View
-      style={[{ flex: 1, alignItems: 'center' }, props.theme.weekColumnStyle]}
-    >
+    <View style={[styles.weekColumnContainer, props.theme.weekColumnStyle]}>
       <Text allowFontScaling={false} style={props.theme.weekColumnTextStyle}>
         {props.day}
       </Text>
@@ -22,15 +30,15 @@ const WeekColumn = React.memo<WeekColumnProps>(
   () => SHOULD_NOT_UPDATE
 );
 
-interface WeekColumnsProps {
+interface WeekDaysProps {
   days: string[];
   theme: ThemeType;
 }
 
-export default React.memo<WeekColumnsProps>(
-  (props: WeekColumnsProps) => (
+export default React.memo<WeekDaysProps>(
+  (props: WeekDaysProps) => (
     <View
-      style={[{ flexDirection: 'row' }, props.theme.weekColumnsContainerStyle]}
+      style={[styles.weekDaysContainer, props.theme.weekColumnsContainerStyle]}
     >
       {props.days.map((day: string) => (
         <WeekColumn key={day} day={day} theme={props.theme} />

@@ -1,4 +1,4 @@
-import React, { ComponentType } from 'react';
+import React, { ComponentType, useCallback, useMemo } from 'react';
 import { StyleSheet, TouchableOpacity, View, Text } from 'react-native';
 import { DayType, ThemeType, DayDot } from '../../types';
 import Dot from '../Dot';
@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
     marginVertical: 5,
     paddingVertical: 10,
   },
+  dotsContainer: { position: 'absolute', bottom: 3, flexDirection: 'row' },
   endDate: {
     borderBottomRightRadius: 60,
     borderTopRightRadius: 60,
@@ -22,6 +23,7 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 60,
     borderTopLeftRadius: 60,
   },
+  nonTouchableDayText: { color: '#d3d3d3' },
 });
 
 interface NonTouchableDayProps {
@@ -67,7 +69,7 @@ const NonTouchableDay = React.memo<NonTouchableDayProps>(
       >
         <Text
           style={[
-            { color: '#d3d3d3' },
+            styles.nonTouchableDayText,
             theme.nonTouchableDayTextStyle,
             isMonthDate ? theme.nonTouchableLastMonthDayTextStyle : {},
             isToday ? theme.todayTextStyle : {},
@@ -115,6 +117,28 @@ const Day = React.memo<Props>(
       theme,
     } = props;
 
+    const dayTextStyle = useMemo(
+      () => ({
+        color: isActive ? 'white' : 'black',
+      }),
+      [isActive]
+    );
+
+    const renderDot = useCallback(
+      (d: DayDot, i) => {
+        return (
+          <Dot
+            key={i.toString()}
+            active={isActive}
+            index={i}
+            {...d}
+            dotContainerStyle={theme.dotContainerStyle}
+          />
+        );
+      },
+      [isActive, theme.dotContainerStyle]
+    );
+
     if (isHidden) {
       return <View style={[styles.container]} />;
     }
@@ -159,7 +183,7 @@ const Day = React.memo<Props>(
           <>
             <Text
               style={[
-                { color: isActive ? 'white' : 'black' },
+                dayTextStyle,
                 theme.dayTextStyle,
                 isToday ? theme.todayTextStyle : {},
                 isActive ? theme.activeDayTextStyle : {},
@@ -167,19 +191,7 @@ const Day = React.memo<Props>(
             >
               {date.getDate()}
             </Text>
-            <View
-              style={{ position: 'absolute', bottom: 3, flexDirection: 'row' }}
-            >
-              {finalDots.map((d, i) => (
-                <Dot
-                  key={i.toString()}
-                  active={isActive}
-                  {...d}
-                  style={{ marginLeft: i === 0 ? 0 : 2 }}
-                  dotContainerStyle={theme.dotContainerStyle}
-                />
-              ))}
-            </View>
+            <View style={styles.dotsContainer}>{finalDots.map(renderDot)}</View>
           </>
         )}
       </TouchableOpacity>

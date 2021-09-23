@@ -1,28 +1,34 @@
-import React from 'react';
-import { View, ViewStyle } from 'react-native';
+import React, { useMemo } from 'react';
+import { StyleSheet, View } from 'react-native';
 
 import { DayDot, DotTheme } from '../../types';
 
+const styles = StyleSheet.create({
+  container: {
+    width: 4,
+    height: 4,
+    borderRadius: 2,
+  },
+});
+
 interface Props extends DayDot, DotTheme {
   active: boolean;
-  style: ViewStyle;
+  index: number;
 }
 
 function Dot({
   active,
   color,
+  index,
   selectedColor,
   dotContainerStyle,
-  style,
 }: Props) {
+  const style = useMemo(() => ({ marginLeft: index === 0 ? 0 : 2 }), [index]);
+
   return (
     <View
       style={[
-        {
-          width: 4,
-          height: 4,
-          borderRadius: 2,
-        },
+        styles.container,
         style,
         dotContainerStyle,
         {

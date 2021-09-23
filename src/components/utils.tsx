@@ -50,9 +50,10 @@ export function getMonthDays(
   for (let i = -startWeekOffset; i < daysToAdd + lastRowNextMonthDays; i++) {
     const date: Date = addDays(firstMonthDay, i);
     const day = date.getDate();
-    const month = date.getMonth();
+    const localMonth = date.getMonth();
     const fullDay = day < 10 ? `0${day}` : day.toString();
-    const fullMonth = month < 10 ? `0${month + 1}` : (month + 1).toString();
+    const fullMonth =
+      localMonth < 10 ? `0${localMonth + 1}` : (localMonth + 1).toString();
     const id = `${date.getFullYear()}-${fullMonth}-${fullDay}`;
 
     let isOnSelectableRange = !minDate && !maxDate;
@@ -94,11 +95,11 @@ export function getMonthDays(
     const today = new Date();
     const isToday =
       day === today.getDate() &&
-      month === today.getMonth() &&
+      localMonth === today.getMonth() &&
       year === today.getFullYear();
 
     days.push({
-      key: `${month}-${id}`,
+      key: `${localMonth}-${id}`,
       id: id,
       date,
       isToday,
