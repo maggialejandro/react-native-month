@@ -3229,15 +3229,15 @@ babel-preset-jest@^26.2.0:
     babel-plugin-jest-hoist "^26.6.2"
     babel-preset-current-node-syntax "^1.0.0"
 
-babel-test@0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/babel-test/-/babel-test-0.2.3.tgz#2acfe26fbbf16dfdd88774da665b9e549d64e21b"
-  integrity sha512-1eh7ZU1Hi7IQKHveu9ATiDZZJuEt4qnszTzF4TcALDT4CyFCAwfPzGGvEUBtFJI1hrAqiYNOx6RHwvpjcGV6jQ==
+babel-test@0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/babel-test/-/babel-test-0.2.4.tgz#0fc3bf67b0d8ed74057779307d7dd23d3a28388a"
+  integrity sha512-Cm+JX2yKa023JxcSQnh0tQm/v91GK93Fz4yPHr7Jvqb/oXbZFsM1u+zv+7PuVlTYRkGi92yho06kmrluTHswgA==
   dependencies:
-    chalk "^2.4.1"
-    error-stack-parser "^2.0.2"
-    escape-string-regexp "^1.0.5"
-    strip-ansi "^5.0.0"
+    chalk "^4.1.0"
+    error-stack-parser "^2.0.6"
+    escape-string-regexp "^4.0.0"
+    strip-ansi "^6.0.0"
 
 balanced-match@^1.0.0:
   version "1.0.0"
@@ -4265,7 +4265,7 @@ error-ex@^1.3.1:
   dependencies:
     is-arrayish "^0.2.1"
 
-error-stack-parser@^2.0.2, error-stack-parser@^2.0.6:
+error-stack-parser@^2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/error-stack-parser/-/error-stack-parser-2.0.6.tgz#5a99a707bd7a4c58a797902d48d82803ede6aad8"
   integrity sha512-d51brTeqC+BHlwF0BhPtcYgF5nlzf9ZZ0ZIUQNZpc9ZB9qw5IJ2diTrBY9jlCJkTLITYPjmiX6OWCwH+fuyNgQ==
