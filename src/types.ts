@@ -6,8 +6,10 @@ export type LocaleType = 'es' | 'en' | 'fr' | 'br' | 'zh';
 interface DayTheme {
   activeDayColor?: string;
   activeDayContainerStyle?: ViewStyle;
+  activeDayContentStyle?: ViewStyle;
   activeDayTextStyle?: TextStyle;
   dayContainerStyle?: ViewStyle;
+  dayContentStyle?: ViewStyle;
   dayOutOfRangeContainerStyle?: ViewStyle;
   dayOutOfRangeTextStyle?: TextStyle;
   dayTextStyle?: TextStyle;
