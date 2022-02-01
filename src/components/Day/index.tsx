@@ -9,10 +9,15 @@ const styles = StyleSheet.create({
   },
   container: {
     alignItems: 'center',
+    justifyContent: 'center',
     backgroundColor: 'white',
     flex: 1,
     marginVertical: 5,
     paddingVertical: 10,
+  },
+  content: {
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   dotsContainer: { position: 'absolute', bottom: 3, flexDirection: 'row' },
   endDate: {
@@ -67,17 +72,25 @@ const NonTouchableDay = React.memo<NonTouchableDayProps>(
           isStartDate ? theme.startDateContainerStyle : {},
         ]}
       >
-        <Text
+        <View
           style={[
-            styles.nonTouchableDayText,
-            theme.nonTouchableDayTextStyle,
-            isMonthDate ? theme.nonTouchableLastMonthDayTextStyle : {},
-            isToday ? theme.todayTextStyle : {},
-            isOutOfRange ? theme.dayOutOfRangeTextStyle : {},
+            styles.content,
+            theme.dayContentStyle,
+            isActive ? theme.activeDayContentStyle : {},
           ]}
         >
-          {date.getDate()}
-        </Text>
+          <Text
+            style={[
+              styles.nonTouchableDayText,
+              theme.nonTouchableDayTextStyle,
+              isMonthDate ? theme.nonTouchableLastMonthDayTextStyle : {},
+              isToday ? theme.todayTextStyle : {},
+              isOutOfRange ? theme.dayOutOfRangeTextStyle : {},
+            ]}
+          >
+            {date.getDate()}
+          </Text>
+        </View>
       </View>
     );
   },
@@ -180,7 +193,13 @@ const Day = React.memo<Props>(
         {props.renderDayContent ? (
           props.renderDayContent(props.item)
         ) : (
-          <>
+          <View
+            style={[
+              styles.content,
+              theme.dayContentStyle,
+              isActive ? theme.activeDayContentStyle : {},
+            ]}
+          >
             <Text
               style={[
                 dayTextStyle,
@@ -192,7 +211,7 @@ const Day = React.memo<Props>(
               {date.getDate()}
             </Text>
             <View style={styles.dotsContainer}>{finalDots.map(renderDot)}</View>
-          </>
+          </View>
         )}
       </TouchableOpacity>
     );
