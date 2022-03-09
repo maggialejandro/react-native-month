@@ -17,7 +17,19 @@ const THEME: ThemeType = {
   nonTouchableDayTextStyle: {},
   startDateContainerStyle: {},
   endDateContainerStyle: {},
-  dayContainerStyle: {},
+  dayContainerStyle: {
+    backgroundColor: 'transparent',
+  },
+  dayContentStyle: {
+    width: 36,
+    height: 36,
+  },
+  activeDayContentStyle: {
+    backgroundColor: '#1890FF',
+    borderRadius: 18,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   dayTextStyle: {
     color: '#2d4150',
     fontWeight: '200',
@@ -30,7 +42,7 @@ const THEME: ThemeType = {
     color: BLUE,
   },
   activeDayContainerStyle: {
-    backgroundColor: BLUE,
+    backgroundColor: 'transparent',
   },
   activeDayTextStyle: {
     color: 'white',
@@ -43,6 +55,7 @@ const truthyValue = true;
 const DISABLED_DAYS = {
   '2020-03-20': truthyValue,
   '2020-03-10': truthyValue,
+  '2022-10-15': truthyValue,
 };
 
 const markedDays: MarkedDays = {
@@ -73,12 +86,12 @@ type State = {
 
 export default class App extends React.PureComponent<Props, State> {
   state = {
-    disableRange: false,
+    disableRange: true,
     offsets: false,
-    startDate: new Date(2020, 2, 11),
-    endDate: new Date(2020, 2, 12),
-    minDate: new Date(2020, 2, 6),
-    maxDate: new Date(2020, 2, 20),
+    startDate: new Date(2022, 9, 11),
+    endDate: new Date(2022, 9, 12),
+    minDate: new Date(2022, 9, 6),
+    maxDate: new Date(2022, 9, 20),
   };
 
   handlePress = (date: Date) => {
