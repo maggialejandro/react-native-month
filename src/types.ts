@@ -1,4 +1,4 @@
-import { ComponentType } from 'react';
+import { ReactElement } from 'react';
 import { ViewStyle, TextStyle } from 'react-native';
 
 export type LocaleType = 'es' | 'en' | 'fr' | 'br' | 'zh';
@@ -137,6 +137,6 @@ export interface MonthProps {
   maxDate?: Date;
   markedDays?: MarkedDays;
   theme?: ThemeType;
-  renderDayContent?: (day: DayType) => ComponentType;
+  renderDayContent?: (day: DayType) => ReactElement;
   disabledDays?: { [key: string]: any };
 }

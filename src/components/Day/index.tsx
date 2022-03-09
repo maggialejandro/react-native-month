@@ -1,4 +1,4 @@
-import React, { ComponentType, useCallback, useMemo } from 'react';
+import React, { ReactElement, useCallback, useMemo } from 'react';
 import { StyleSheet, TouchableOpacity, View, Text } from 'react-native';
 import { DayType, ThemeType, DayDot } from '../../types';
 import Dot from '../Dot';
@@ -109,7 +109,7 @@ interface Props {
   dots?: DayDot[];
   item: DayType;
   theme: ThemeType;
-  renderDayContent?: (day: DayType) => ComponentType;
+  renderDayContent?: (day: DayType) => ReactElement;
 }
 
 const Day = React.memo<Props>(
