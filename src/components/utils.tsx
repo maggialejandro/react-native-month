@@ -53,7 +53,7 @@ export function getMonthDays(
     const localMonth = date.getMonth();
     const fullDay = day < 10 ? `0${day}` : day.toString();
     const fullMonth =
-      localMonth < 10 ? `0${localMonth + 1}` : (localMonth + 1).toString();
+      localMonth < 9 ? `0${localMonth + 1}` : (localMonth + 1).toString();
     const id = `${date.getFullYear()}-${fullMonth}-${fullDay}`;
 
     let isOnSelectableRange = !minDate && !maxDate;
