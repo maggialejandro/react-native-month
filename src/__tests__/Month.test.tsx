@@ -52,4 +52,14 @@ describe('Month', () => {
     const tree = renderer.create(<Month {...props} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('should show six weeks', () => {
+    const props: MonthProps = {
+      ...defaultProps,
+      showSixWeeks: true,
+    };
+
+    const tree = renderer.create(<Month {...props} />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

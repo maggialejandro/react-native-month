@@ -31,6 +31,7 @@ export default React.memo<MonthProps>((props: MonthProps) => {
     markedDays = {},
     theme = {},
     renderDayContent,
+    showSixWeeks = false,
   } = props;
 
   const DAY_NAMES =
@@ -48,7 +49,8 @@ export default React.memo<MonthProps>((props: MonthProps) => {
     startDate,
     endDate,
     minDate,
-    maxDate
+    maxDate,
+    showSixWeeks
   );
 
   const weeks = [];

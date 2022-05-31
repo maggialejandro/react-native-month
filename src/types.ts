@@ -136,6 +136,7 @@ export interface MonthProps {
   minDate?: Date;
   maxDate?: Date;
   markedDays?: MarkedDays;
+  showSixWeeks?: boolean;
   theme?: ThemeType;
   renderDayContent?: (day: DayType) => ReactElement;
   disabledDays?: { [key: string]: any };
