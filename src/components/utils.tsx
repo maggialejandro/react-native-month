@@ -28,7 +28,8 @@ export function getMonthDays(
   startDate?: Date,
   endDate?: Date,
   minDate?: Date,
-  maxDate?: Date
+  maxDate?: Date,
+  showSixWeeks?: boolean
 ): DayType[] {
   if (minDate instanceof Date) minDate.setHours(0, 0, 0, 0);
   if (maxDate instanceof Date) maxDate.setHours(0, 0, 0, 0);
@@ -45,7 +46,13 @@ export function getMonthDays(
     ? MONDAY_FIRST[firstMonthDay.getDay()]
     : firstMonthDay.getDay();
   const daysToCompleteRows = (startWeekOffset + daysToAdd) % 7;
-  const lastRowNextMonthDays = daysToCompleteRows ? 7 - daysToCompleteRows : 0;
+  let lastRowNextMonthDays = daysToCompleteRows ? 7 - daysToCompleteRows : 0;
+  const totalDays = startWeekOffset + daysToAdd + lastRowNextMonthDays;
+  const sixWeekDays = 42;
+
+  if (showSixWeeks && totalDays !== sixWeekDays) {
+    lastRowNextMonthDays += sixWeekDays - totalDays;
+  }
 
   for (let i = -startWeekOffset; i < daysToAdd + lastRowNextMonthDays; i++) {
     const date: Date = addDays(firstMonthDay, i);
