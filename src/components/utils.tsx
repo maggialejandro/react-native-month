@@ -2,6 +2,8 @@ import { addDays, getNumberOfDaysInMonth } from '../utils/date';
 import { changedDate, changeMarkedDays, sameDate } from '../utils/validations';
 import { MonthProps, DayType } from '../types';
 
+const SATURDAY = 6;
+const SUNDAY = 0;
 const MONDAY_FIRST = [6, 0, 1, 2, 3, 4, 5];
 
 function dayShouldBeActive(
@@ -100,6 +102,8 @@ export function getMonthDays(
     }
 
     const today = new Date();
+    const dow = date.getDay();
+    const isWeekend = dow === SATURDAY || dow === SUNDAY;
     const isToday =
       day === today.getDate() &&
       localMonth === today.getMonth() &&
@@ -110,6 +114,7 @@ export function getMonthDays(
       id: id,
       date,
       isToday,
+      isWeekend,
       isMonthDate,
       isActive,
       isStartDate,

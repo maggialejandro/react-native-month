@@ -18,6 +18,7 @@ const THEME: ThemeType = {
   startDateContainerStyle: {},
   endDateContainerStyle: {},
   dayContainerStyle: {
+    marginVertical: 0,
     backgroundColor: 'transparent',
   },
   dayContentStyle: {
@@ -37,6 +38,9 @@ const THEME: ThemeType = {
   },
   dayOutOfRangeContainerStyle: {},
   dayOutOfRangeTextStyle: {},
+  weekendContainerStyle: {
+    backgroundColor: 'rgb(249,250,252)',
+  },
   todayContainerStyle: {},
   todayTextStyle: {
     color: BLUE,

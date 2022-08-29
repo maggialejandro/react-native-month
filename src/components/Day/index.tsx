@@ -39,6 +39,7 @@ interface NonTouchableDayProps {
   isStartDate: boolean;
   isEndDate: boolean;
   isVisible: boolean;
+  isWeekend: boolean;
   isToday: boolean;
   theme: ThemeType;
 }
@@ -53,6 +54,7 @@ const NonTouchableDay = React.memo<NonTouchableDayProps>(
       isEndDate,
       theme,
       date,
+      isWeekend,
       isToday,
     } = props;
 
@@ -62,6 +64,7 @@ const NonTouchableDay = React.memo<NonTouchableDayProps>(
           styles.container,
           theme.dayContainerStyle,
           theme.nonTouchableDayContainerStyle,
+          isWeekend ? theme.weekendContainerStyle : {},
           isToday && !isActive ? theme.todayContainerStyle : {},
           isActive ? styles.activeDate : {},
           isActive ? theme.activeDayContainerStyle : {},
@@ -76,6 +79,7 @@ const NonTouchableDay = React.memo<NonTouchableDayProps>(
           style={[
             styles.content,
             theme.dayContentStyle,
+            isWeekend ? theme.weekendContentStyle : {},
             isActive ? theme.activeDayContentStyle : {},
           ]}
         >
@@ -83,6 +87,7 @@ const NonTouchableDay = React.memo<NonTouchableDayProps>(
             style={[
               styles.nonTouchableDayText,
               theme.nonTouchableDayTextStyle,
+              isWeekend ? theme.weekendTextStyle : {},
               isMonthDate ? theme.nonTouchableLastMonthDayTextStyle : {},
               isToday ? theme.todayTextStyle : {},
               isOutOfRange ? theme.dayOutOfRangeTextStyle : {},
@@ -124,6 +129,7 @@ const Day = React.memo<Props>(
         isMonthDate,
         isOutOfRange,
         isToday,
+        isWeekend,
         isHidden,
       },
       dots = [],
@@ -167,6 +173,7 @@ const Day = React.memo<Props>(
           isStartDate={isStartDate}
           isEndDate={isEndDate}
           isVisible={isVisible}
+          isWeekend={isWeekend}
           isToday={isToday}
         />
       );
@@ -180,6 +187,7 @@ const Day = React.memo<Props>(
         style={[
           styles.container,
           theme.dayContainerStyle,
+          isWeekend ? theme.weekendContainerStyle : {},
           isToday && !isActive ? theme.todayContainerStyle : {},
           isActive ? styles.activeDate : {},
           isActive ? theme.activeDayContainerStyle : {},
@@ -197,6 +205,7 @@ const Day = React.memo<Props>(
             style={[
               styles.content,
               theme.dayContentStyle,
+              isWeekend ? theme.weekendContentStyle : {},
               isActive ? theme.activeDayContentStyle : {},
             ]}
           >
@@ -204,6 +213,7 @@ const Day = React.memo<Props>(
               style={[
                 dayTextStyle,
                 theme.dayTextStyle,
+                isWeekend ? theme.weekendTextStyle : {},
                 isToday ? theme.todayTextStyle : {},
                 isActive ? theme.activeDayTextStyle : {},
               ]}
