@@ -18,6 +18,9 @@ interface DayTheme {
   nonTouchableDayContainerStyle?: ViewStyle;
   nonTouchableDayTextStyle?: TextStyle;
   nonTouchableLastMonthDayTextStyle?: TextStyle;
+  weekendContainerStyle?: ViewStyle;
+  weekendContentStyle?: ViewStyle;
+  weekendTextStyle?: TextStyle;
   todayContainerStyle?: ViewStyle;
   todayTextStyle?: TextStyle;
 }
@@ -59,6 +62,7 @@ export type DayType = {
   isOutOfRange: boolean;
   isStartDate: boolean;
   isToday: boolean;
+  isWeekend: boolean;
   isVisible: boolean;
 };
 

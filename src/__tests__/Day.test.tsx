@@ -13,6 +13,7 @@ const defaultDay = {
   isStartDate: false,
   isEndDate: false,
   isVisible: true,
+  isWeekend: false,
   isOutOfRange: false,
   isHidden: false,
 };
