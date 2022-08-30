@@ -31,6 +31,9 @@ const THEME: ThemeType = {
     alignItems: 'center',
     justifyContent: 'center',
   },
+  activeDayTextStyle: {
+    color: 'white',
+  },
   dayTextStyle: {
     color: '#2d4150',
     fontWeight: '200',
@@ -48,9 +51,6 @@ const THEME: ThemeType = {
   activeDayContainerStyle: {
     backgroundColor: 'transparent',
   },
-  activeDayTextStyle: {
-    color: 'white',
-  },
   nonTouchableLastMonthDayTextStyle: {},
 };
 
@@ -63,7 +63,7 @@ const DISABLED_DAYS = {
 };
 
 const markedDays: MarkedDays = {
-  '2020-03-12': {
+  '2022-10-12': {
     dots: [
       {
         color: 'red',

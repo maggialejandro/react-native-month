@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  dotsContainer: { position: 'absolute', bottom: 3, flexDirection: 'row' },
+  dotsContainer: { position: 'absolute', bottom: -5, flexDirection: 'row' },
   endDate: {
     borderBottomRightRadius: 60,
     borderTopRightRadius: 60,
