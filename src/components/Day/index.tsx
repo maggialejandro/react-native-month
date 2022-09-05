@@ -1,6 +1,6 @@
 import React, { ReactElement, useCallback, useMemo } from 'react';
 import { StyleSheet, TouchableOpacity, View, Text } from 'react-native';
-import { DayType, ThemeType, DayDot } from '../../types';
+import { DayType, ThemeType, DayDot, DayTheme } from '../../types';
 import Dot from '../Dot';
 
 const styles = StyleSheet.create({
@@ -42,6 +42,7 @@ interface NonTouchableDayProps {
   isWeekend: boolean;
   isToday: boolean;
   theme: ThemeType;
+  dayTheme?: DayTheme;
 }
 
 const NonTouchableDay = React.memo<NonTouchableDayProps>(
@@ -53,6 +54,7 @@ const NonTouchableDay = React.memo<NonTouchableDayProps>(
       isStartDate,
       isEndDate,
       theme,
+      dayTheme,
       date,
       isWeekend,
       isToday,
@@ -63,34 +65,49 @@ const NonTouchableDay = React.memo<NonTouchableDayProps>(
         style={[
           styles.container,
           theme.dayContainerStyle,
+          dayTheme?.dayContainerStyle,
           theme.nonTouchableDayContainerStyle,
+          dayTheme?.nonTouchableDayContainerStyle,
           isWeekend ? theme.weekendContainerStyle : {},
+          isWeekend ? dayTheme?.weekendContainerStyle : {},
           isToday && !isActive ? theme.todayContainerStyle : {},
+          isToday && !isActive ? dayTheme?.todayContainerStyle : {},
           isActive ? styles.activeDate : {},
           isActive ? theme.activeDayContainerStyle : {},
+          isActive ? dayTheme?.activeDayContainerStyle : {},
           isOutOfRange ? theme.dayOutOfRangeContainerStyle : {},
+          isOutOfRange ? dayTheme?.dayOutOfRangeContainerStyle : {},
           isEndDate ? styles.endDate : {},
           isEndDate ? theme.endDateContainerStyle : {},
+          isEndDate ? dayTheme?.endDateContainerStyle : {},
           isStartDate ? styles.startDate : {},
           isStartDate ? theme.startDateContainerStyle : {},
+          isStartDate ? dayTheme?.startDateContainerStyle : {},
         ]}
       >
         <View
           style={[
             styles.content,
             theme.dayContentStyle,
+            dayTheme?.dayContentStyle,
             isWeekend ? theme.weekendContentStyle : {},
+            isWeekend ? dayTheme?.weekendContentStyle : {},
             isActive ? theme.activeDayContentStyle : {},
+            isActive ? dayTheme?.activeDayContentStyle : {},
           ]}
         >
           <Text
             style={[
               styles.nonTouchableDayText,
               theme.nonTouchableDayTextStyle,
+              dayTheme?.nonTouchableDayTextStyle,
               isWeekend ? theme.weekendTextStyle : {},
+              isWeekend ? dayTheme?.weekendTextStyle : {},
               isMonthDate ? theme.nonTouchableLastMonthDayTextStyle : {},
+              isMonthDate ? dayTheme?.nonTouchableLastMonthDayTextStyle : {},
               isToday ? theme.todayTextStyle : {},
               isOutOfRange ? theme.dayOutOfRangeTextStyle : {},
+              isOutOfRange ? dayTheme?.dayOutOfRangeTextStyle : {},
             ]}
           >
             {date.getDate()}
@@ -112,6 +129,7 @@ const NonTouchableDay = React.memo<NonTouchableDayProps>(
 interface Props {
   onPress: (date: Date) => void;
   dots?: DayDot[];
+  dayTheme?: DayTheme;
   item: DayType;
   theme: ThemeType;
   renderDayContent?: (day: DayType) => ReactElement;
@@ -133,6 +151,7 @@ const Day = React.memo<Props>(
         isHidden,
       },
       dots = [],
+      dayTheme,
       theme,
     } = props;
 
@@ -159,7 +178,7 @@ const Day = React.memo<Props>(
     );
 
     if (isHidden) {
-      return <View style={[styles.container]} />;
+      return <View style={styles.container} />;
     }
 
     if (!isVisible) {
@@ -187,14 +206,19 @@ const Day = React.memo<Props>(
         style={[
           styles.container,
           theme.dayContainerStyle,
+          dayTheme?.dayContainerStyle,
           isWeekend ? theme.weekendContainerStyle : {},
+          isWeekend ? dayTheme?.weekendContainerStyle : {},
           isToday && !isActive ? theme.todayContainerStyle : {},
+          dayTheme && !isActive ? dayTheme.todayContainerStyle : {},
           isActive ? styles.activeDate : {},
           isActive ? theme.activeDayContainerStyle : {},
+          isActive ? dayTheme?.activeDayContainerStyle : {},
           isStartDate ? styles.startDate : {},
           isStartDate ? theme.startDateContainerStyle : {},
+          isStartDate ? dayTheme?.startDateContainerStyle : {},
           isEndDate ? styles.endDate : {},
-          isEndDate ? theme.endDateContainerStyle : {},
+          isEndDate ? dayTheme?.endDateContainerStyle : {},
         ]}
         onPress={() => props.onPress(props.item.date)}
       >
@@ -205,17 +229,23 @@ const Day = React.memo<Props>(
             style={[
               styles.content,
               theme.dayContentStyle,
+              dayTheme ? dayTheme.dayContentStyle : {},
               isWeekend ? theme.weekendContentStyle : {},
+              isWeekend ? dayTheme?.weekendContentStyle : {},
               isActive ? theme.activeDayContentStyle : {},
+              isActive ? dayTheme?.activeDayContentStyle : {},
             ]}
           >
             <Text
               style={[
                 dayTextStyle,
                 theme.dayTextStyle,
+                dayTheme && dayTheme.dayTextStyle,
                 isWeekend ? theme.weekendTextStyle : {},
                 isToday ? theme.todayTextStyle : {},
+                isToday ? dayTheme?.todayTextStyle : {},
                 isActive ? theme.activeDayTextStyle : {},
+                isActive ? dayTheme?.activeDayTextStyle : {},
               ]}
             >
               {date.getDate()}
