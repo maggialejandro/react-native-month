@@ -20,6 +20,6 @@
     "babel-preset-expo": "8.3.0"
   },
   "resolutions": {
-    "@babel/runtime": "7.9.2"
+    "@babel/runtime": "7.19.0"
   }
 }
