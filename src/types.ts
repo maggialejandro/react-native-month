@@ -3,7 +3,7 @@ import { ViewStyle, TextStyle } from 'react-native';
 
 export type LocaleType = 'es' | 'en' | 'fr' | 'br' | 'zh';
 
-interface DayTheme {
+export interface DayTheme {
   activeDayColor?: string;
   activeDayContainerStyle?: ViewStyle;
   activeDayContentStyle?: ViewStyle;
@@ -67,7 +67,8 @@ export type DayType = {
 };
 
 type MarkedDay = {
-  dots: DayDot[];
+  dots?: DayDot[];
+  theme?: DayTheme;
 };
 
 export type MarkedDays = Record<string, MarkedDay>;

@@ -74,6 +74,15 @@ const markedDays: MarkedDays = {
         selectedColor: 'yellow',
       },
     ],
+    theme: {
+      dayContentStyle: {
+        backgroundColor: 'green',
+        borderRadius: 8,
+      },
+      dayTextStyle: {
+        color: 'lightgrey',
+      },
+    },
   },
 };
 

@@ -68,7 +68,8 @@ export default React.memo<MonthProps>((props: MonthProps) => {
             <Day
               key={day.key}
               item={day}
-              dots={markedDays[day.id] ? markedDays[day.id].dots : []}
+              dots={markedDays[day.id]?.dots}
+              dayTheme={markedDays[day.id]?.theme}
               onPress={onPress}
               theme={theme}
               renderDayContent={renderDayContent}
