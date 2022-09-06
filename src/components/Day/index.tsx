@@ -203,6 +203,7 @@ const Day = React.memo<Props>(
 
     return (
       <TouchableOpacity
+        testID="day-pressable"
         style={[
           styles.container,
           theme.dayContainerStyle,

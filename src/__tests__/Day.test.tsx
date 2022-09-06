@@ -1,6 +1,5 @@
-/* @jest-environment jsdom */
 import * as React from 'react';
-import { shallow } from 'enzyme';
+import { render, screen, fireEvent } from '@testing-library/react-native';
 import Day from '../components/Day';
 
 const defaultDay = {
@@ -30,9 +29,11 @@ describe('Day', () => {
       },
     };
 
-    const wrapper = shallow(<Day {...props} />);
-    const text = wrapper.find('Text').first();
-    expect(text.prop('children')).toBe(today.getDate());
+    const { unmount } = render(<Day {...props} />);
+
+    expect(screen.getByText(today.getDate().toString())).toBeTruthy();
+
+    unmount();
   });
 
   it('should change from disabled to enabled', () => {
@@ -46,13 +47,14 @@ describe('Day', () => {
       },
     };
 
-    const wrapper = shallow(<Day {...props} />);
-    wrapper.simulate('press');
-    expect(onPressHandler).not.toHaveBeenCalled();
+    const { queryByTestId } = render(<Day {...props} />);
+    expect(queryByTestId('day-pressable')).toBeNull();
 
-    wrapper.setProps({ item: { ...props.item, isVisible: true } });
-    wrapper.simulate('press');
-    expect(onPressHandler).toHaveBeenCalled();
+    const { getByTestId } = render(
+      <Day {...{ ...props, item: { ...props.item, isVisible: true } }} />
+    );
+
+    expect(getByTestId('day-pressable')).toBeDefined();
   });
 
   it('should return a date', () => {
@@ -65,8 +67,11 @@ describe('Day', () => {
       },
     };
 
-    const wrapper = shallow(<Day {...props} />);
-    wrapper.simulate('press');
+    const { getByTestId } = render(<Day {...props} />);
+    const dayPressable = getByTestId('day-pressable');
+
+    fireEvent.press(dayPressable);
+
     expect(onPressHandler).toHaveReturnedWith(props.item.date);
   });
 });

@@ -1,8 +1,7 @@
-/* @jest-environment jsdom */
 import * as React from 'react';
 import renderer from 'react-test-renderer';
 import Month from '../components/Month';
-import { MonthProps } from '../../src/types';
+import { MonthProps } from '../types';
 
 const defaultProps = {
   month: 2,
