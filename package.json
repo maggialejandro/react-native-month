@@ -4,6 +4,7 @@
   "description": "React Native Month",
   "main": "lib/commonjs/index.js",
   "react-native": "lib/module/index.js",
+  "source": "src/index.tsx",
   "module": "lib/module/index.js",
   "types": "lib/typescript/src/index.d.ts",
   "files": [
@@ -36,36 +37,36 @@
     "react-native": "*"
   },
   "devDependencies": {
-    "@babel/core": "7.13.10",
-    "@babel/runtime": "7.13.10",
-    "@react-native-community/eslint-config": "^3.0.1",
-    "@types/enzyme": "3.10.5",
-    "@types/jest": "25.1.4",
-    "@types/react": "16.9.0",
-    "@types/react-native": "0.63.25",
+    "@babel/core": "^7.19.0",
+    "@babel/preset-typescript": "^7.18.6",
+    "@babel/runtime": "^7.19.0",
+    "@react-native-community/eslint-config": "^3.1.0",
+    "@testing-library/jest-native": "^4.0.11",
+    "@testing-library/react-native": "^11.0.0",
+    "@types/jest": "^26.0.14",
+    "@types/react-native": "^0.68.4",
     "@types/react-test-renderer": "16.9.2",
-    "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.1.0",
-    "babel-jest": "26.2.2",
-    "babel-test": "0.2.3",
-    "enzyme": "3.11.0",
-    "enzyme-adapter-react-16": "1.15.2",
+    "babel-jest": "29.0.2",
+    "babel-test": "0.2.4",
     "eslint": "7.32.0",
-    "eslint-config-prettier": "8.3.0",
-    "eslint-plugin-prettier": "4.0.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-prettier": "4.2.1",
     "husky": "4.3.0",
-    "jest": "25.1.0",
-    "jest-enzyme": "7.1.2",
-    "jsdom": "16.2.1",
-    "metro-react-native-babel-preset": "0.56.0",
+    "jest": "^26.1.0",
     "prettier": "2.1.2",
-    "react": "16.9.0",
-    "react-dom": "16.9.0",
-    "react-native": "0.63.3",
-    "react-native-builder-bob": "0.18.1",
-    "react-test-renderer": "16.9.0",
-    "ts-jest": "25.2.1",
-    "typescript": "4.2.3"
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-native": "0.68.2",
+    "react-native-builder-bob": "0.18.3",
+    "react-test-renderer": "16.13.1",
+    "ts-jest": "26.4.4",
+    "typescript": "~4.3.5"
+  },
+  "babel": {
+    "presets": [
+      "module:metro-react-native-babel-preset"
+    ]
   },
   "husky": {
     "hooks": {
@@ -75,15 +76,12 @@
   "jest": {
     "preset": "react-native",
     "setupFilesAfterEnv": [
-      "<rootDir>setup-tests.js"
+      "@testing-library/jest-native/extend-expect"
     ],
     "testMatch": [
       "**/__tests__/**/*.+(ts|tsx|js)",
       "**/?(*.)+(spec|test).+(ts|tsx|js)"
     ],
-    "transform": {
-      ".+\\.(ts|tsx)$": "ts-jest"
-    },
     "moduleFileExtensions": [
       "ts",
       "tsx",

@@ -4,22 +4,24 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web",
-    "eject": "expo eject"
+    "web": "expo start --web"
   },
   "dependencies": {
-    "expo": "^41.0.0",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-41.0.0.tar.gz"
+    "@expo/webpack-config": "^0.17.2",
+    "expo": "~46.0.9",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "react-native": "0.69.5",
+    "react-native-web": "~0.18.7"
   },
   "devDependencies": {
-    "@types/react": "~16.9.35",
-    "@types/react-native": "~0.63.2",
-    "babel-plugin-module-resolver": "4.0.0",
-    "babel-preset-expo": "8.3.0"
+    "@babel/core": "^7.12.9",
+    "babel-loader": "^8.2.5",
+    "babel-plugin-module-resolver": "4.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "~4.3.5"
   },
   "resolutions": {
-    "@babel/runtime": "7.9.2"
+    "@types/react": "17.0.2"
   }
 }
