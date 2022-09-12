@@ -115,6 +115,21 @@ export function getMonthNames(locale: LocaleType) {
         'Novembro',
         'Dezembro',
       ];
+    case 'ko':
+      return [
+        '1월',
+        '2월',
+        '3월',
+        '4월',
+        '5월',
+        '6월',
+        '7월',
+        '8월',
+        '9월',
+        '10월',
+        '11월',
+        '12월'
+      ];
     default:
       return [
         'January',
@@ -145,6 +160,8 @@ function getWeekdayNames(locale: LocaleType) {
       return ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'];
     case 'zh':
       return ['日', '一', '二', '三', '四', '五', '六'];
+    case 'ko':
+      return ['일', '월', '화', '수', '목', '금', '토'];
     default:
       return ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   }
