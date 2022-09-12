@@ -128,8 +128,8 @@ export function getMonthNames(locale: LocaleType) {
         'Сентябрь',
         'Октябрь',
         'Ноябрь',
-        'Декабрь'
-      ]
+        'Декабрь',
+      ];
     default:
       return [
         'January',
