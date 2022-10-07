@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import { View, StatusBar, SafeAreaView } from 'react-native';
 import { Month, ThemeType, MarkedDays } from 'react-native-month';
 
@@ -86,86 +86,68 @@ const markedDays: MarkedDays = {
   },
 };
 
-type Props = {};
-
-type State = {
-  disableRange: boolean;
-  offsets: boolean;
-  minDate?: Date;
-  maxDate?: Date;
-  startDate: Date;
-  endDate?: Date;
+const INITIAL_STATE = {
+  startDate: new Date(2022, 9, 11),
+  endDate: new Date(2022, 9, 12),
+  minDate: new Date(2022, 9, 6),
+  maxDate: new Date(2022, 9, 20),
 };
 
-export default class App extends React.PureComponent<Props, State> {
-  state = {
-    disableRange: true,
-    offsets: false,
-    startDate: new Date(2022, 9, 11),
-    endDate: new Date(2022, 9, 12),
-    minDate: new Date(2022, 9, 6),
-    maxDate: new Date(2022, 9, 20),
-  };
+const App = () => {
+  const [startDate, setStartDate] = useState<Date | undefined>(
+    INITIAL_STATE.startDate
+  );
+  const [endDate, setEndDate] = useState<Date | undefined>(
+    INITIAL_STATE.endDate
+  );
 
-  handlePress = (date: Date) => {
-    const { startDate, endDate } = this.state;
-    let newStartDate;
-    let newEndDate;
-
-    if (this.state.disableRange) {
-      newStartDate = date;
-      newEndDate = date;
-    } else if (startDate) {
-      if (endDate) {
-        newStartDate = date;
-        newEndDate = undefined;
-      } else if (date < startDate!) {
-        newStartDate = date;
-      } else if (date > startDate!) {
-        newStartDate = startDate;
-        newEndDate = date;
+  const handleChangeDate = useCallback(
+    (date) => {
+      if (startDate) {
+        if (endDate) {
+          setStartDate(date);
+          setEndDate(undefined);
+        } else if (date < startDate) {
+          setStartDate(date);
+        } else if (date > startDate) {
+          setEndDate(date);
+        } else {
+          setStartDate(date);
+          setEndDate(date);
+        }
       } else {
-        newStartDate = date;
-        newEndDate = date;
+        setStartDate(date);
       }
-    } else {
-      newStartDate = date;
-    }
+    },
+    [startDate, endDate]
+  );
 
-    const newRange = {
-      startDate: newStartDate as Date,
-      endDate: newEndDate,
-    };
+  return (
+    <SafeAreaView>
+      <View
+        style={{
+          paddingTop: StatusBar.currentHeight,
+        }}
+      >
+        <Month
+          month={startDate.getMonth()}
+          year={startDate.getFullYear()}
+          onPress={handleChangeDate}
+          theme={THEME}
+          showWeekdays
+          locale="en"
+          firstDayMonday
+          minDate={INITIAL_STATE.minDate}
+          maxDate={INITIAL_STATE.maxDate}
+          markedDays={markedDays}
+          disableRange={false}
+          startDate={startDate}
+          endDate={endDate}
+          disabledDays={DISABLED_DAYS}
+        />
+      </View>
+    </SafeAreaView>
+  );
+};
 
-    this.setState(newRange);
-  };
-
-  render() {
-    return (
-      <SafeAreaView>
-        <View
-          style={{
-            paddingTop: StatusBar.currentHeight,
-          }}
-        >
-          <Month
-            month={this.state.startDate.getMonth()}
-            year={this.state.startDate.getFullYear()}
-            onPress={this.handlePress}
-            theme={THEME}
-            showWeekdays
-            locale="en"
-            firstDayMonday
-            minDate={this.state.minDate}
-            maxDate={this.state.maxDate}
-            markedDays={markedDays}
-            disableRange={this.state.disableRange}
-            startDate={this.state.startDate}
-            endDate={this.state.endDate}
-            disabledDays={DISABLED_DAYS}
-          />
-        </View>
-      </SafeAreaView>
-    );
-  }
-}
+export default App;
