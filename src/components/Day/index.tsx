@@ -219,6 +219,7 @@ const Day = React.memo<Props>(
           isStartDate ? theme.startDateContainerStyle : {},
           isStartDate ? dayTheme?.startDateContainerStyle : {},
           isEndDate ? styles.endDate : {},
+          isEndDate ? theme.endDateContainerStyle : {},
           isEndDate ? dayTheme?.endDateContainerStyle : {},
         ]}
         onPress={() => props.onPress(props.item.date)}
