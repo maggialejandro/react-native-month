@@ -1,7 +1,10 @@
 # React Native Month 📆
 
-[![BuildStatus](https://img.shields.io/travis/maggialejandro/react-native-month/master.svg)](https://travis-ci.org/maggialejandro/react-native-month)
-[![NPM version](https://img.shields.io/npm/v/react-native-month.svg)](https://www.npmjs.com/package/react-native-month) [![npm](https://img.shields.io/npm/dw/react-native-month.svg)](https://github.com/maggialejandro/react-native-month) [![CodeFactor](https://www.codefactor.io/repository/github/maggialejandro/react-native-month/badge)](https://www.codefactor.io/repository/github/maggialejandro/react-native-month) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/832690f286a5451cacdae664d63be3b9)](https://www.codacy.com/app/maggialejandro/react-native-month?utm_source=github.com&utm_medium=referral&utm_content=maggialejandro/react-native-month&utm_campaign=Badge_Grade)
+![BuildStatus](https://github.com/maggialejandro/react-native-month/actions/workflows/lint.yml/badge.svg) [![NPM version](https://img.shields.io/npm/v/react-native-month.svg)](https://www.npmjs.com/package/react-native-month) [![npm](https://img.shields.io/npm/dm/react-native-month.svg)](https://github.com/maggialejandro/react-native-month) [![CodeFactor](https://www.codefactor.io/repository/github/maggialejandro/react-native-month/badge)](https://www.codefactor.io/repository/github/maggialejandro/react-native-month) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/832690f286a5451cacdae664d63be3b9)](https://www.codacy.com/app/maggialejandro/react-native-month?utm_source=github.com&utm_medium=referral&utm_content=maggialejandro/react-native-month&utm_campaign=Badge_Grade)
+
+<p align="center">
+  <img alt="Screenshot" src="https://github.com/maggialejandro/react-native-month/blob/master/month.png?raw=true" width="400" />
+</p>
 
 ## Installation
 
