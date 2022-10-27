@@ -1,5 +1,9 @@
 export { default as Month } from './components/Month';
 
-export { getWeekdayNames, getMonthNames } from './utils/date';
+export { default as WeekDays } from './components/WeekDays';
+
+export { default as Day } from './components/Day';
+
+export { getWeekdayNames, getMonthNames, getDayNames } from './utils/date';
 
 export { MonthProps, ThemeType, LocaleType, MarkedDays } from './types';
