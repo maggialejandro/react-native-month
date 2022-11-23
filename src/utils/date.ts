@@ -130,6 +130,21 @@ export function getMonthNames(locale: LocaleType) {
         'Ноябрь',
         'Декабрь',
       ];
+    case 'uk':
+      return [
+        'Січень',
+        'Лютий',
+        'Березень',
+        'Квітень',
+        'Травень',
+        'Червень',
+        'Липень',
+        'Серпень',
+        'Вересень',
+        'Жовтень',
+        'Листопад',
+        'Грудень',
+      ];
     default:
       return [
         'January',
@@ -162,6 +177,8 @@ export function getWeekdayNames(locale: LocaleType) {
       return ['日', '一', '二', '三', '四', '五', '六'];
     case 'ru':
       return ['ВСК', 'ПНД', 'ВТР', 'СРД', 'ЧТВ', 'ПТН', 'СБТ'];
+    case 'uk':
+      return ['НЕД', 'ПНД', 'ВВТ', 'СРД', 'ЧТВ', 'ПТН', 'СБТ'];
     default:
       return ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   }
