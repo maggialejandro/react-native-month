@@ -2,9 +2,9 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { DayType, MonthProps } from '../../types';
 import { getDayNames } from '../../utils/date';
-import { getMonthDays, areEqual } from '../utils';
-import WeekDays from '../WeekDays';
 import Day from '../Day';
+import { areEqual, getMonthDays } from '../utils';
+import WeekDays from '../WeekDays';
 
 const styles = StyleSheet.create({
   weekContainer: {
@@ -32,6 +32,7 @@ export default React.memo<MonthProps>((props: MonthProps) => {
     theme = {},
     renderDayContent,
     showSixWeeks = false,
+    selectedDate,
   } = props;
 
   const DAY_NAMES =
@@ -50,7 +51,8 @@ export default React.memo<MonthProps>((props: MonthProps) => {
     endDate,
     minDate,
     maxDate,
-    showSixWeeks
+    showSixWeeks,
+    selectedDate
   );
 
   const weeks = [];

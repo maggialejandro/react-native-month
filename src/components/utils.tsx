@@ -1,6 +1,6 @@
+import { DayType, MonthProps } from '../types';
 import { addDays, getNumberOfDaysInMonth } from '../utils/date';
 import { changedDate, changeMarkedDays, sameDate } from '../utils/validations';
-import { MonthProps, DayType } from '../types';
 
 const SATURDAY = 6;
 const SUNDAY = 0;
@@ -31,7 +31,8 @@ export function getMonthDays(
   endDate?: Date,
   minDate?: Date,
   maxDate?: Date,
-  showSixWeeks?: boolean
+  showSixWeeks?: boolean,
+  selectedDate?: Date
 ): DayType[] {
   if (minDate instanceof Date) minDate.setHours(0, 0, 0, 0);
   if (maxDate instanceof Date) maxDate.setHours(0, 0, 0, 0);
@@ -79,6 +80,7 @@ export function getMonthDays(
     let isStartDate = false;
     let isEndDate = false;
     let isActive = false;
+    let isSelected = selectedDate ? sameDate(date, selectedDate) : false;
 
     if (endDate && startDate && !disableRange) {
       isStartDate = isMonthDate && sameDate(date, startDate);
@@ -122,6 +124,7 @@ export function getMonthDays(
       isOutOfRange,
       isVisible: isOnSelectableRange && isMonthDate && !disabledDays[id],
       isHidden: disableOffsetDays && !isMonthDate,
+      isSelected,
     });
   }
 

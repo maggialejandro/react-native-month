@@ -7,6 +7,7 @@ const defaultProps = {
   month: 2,
   year: 2020,
   onPress: jest.fn(),
+  selectedDate: new Date(),
 };
 
 describe('Month', () => {
