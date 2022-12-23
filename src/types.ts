@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import { ViewStyle, TextStyle } from 'react-native';
+import { TextStyle, ViewStyle } from 'react-native';
 
 export type LocaleType = 'es' | 'en' | 'fr' | 'br' | 'zh' | 'ru' | 'uk';
 
@@ -23,6 +23,9 @@ export interface DayTheme {
   weekendTextStyle?: TextStyle;
   todayContainerStyle?: ViewStyle;
   todayTextStyle?: TextStyle;
+  selectedDateContainerStyle?: ViewStyle;
+  selectedDateContentStyle?: ViewStyle;
+  selectedDateTextStyle?: TextStyle;
 }
 
 export interface DotTheme {
@@ -64,6 +67,7 @@ export type DayType = {
   isToday: boolean;
   isWeekend: boolean;
   isVisible: boolean;
+  isSelected: boolean;
 };
 
 type MarkedDay = {
@@ -145,4 +149,5 @@ export interface MonthProps {
   theme?: ThemeType;
   renderDayContent?: (day: DayType) => ReactElement;
   disabledDays?: { [key: string]: any };
+  selectedDate?: Date;
 }

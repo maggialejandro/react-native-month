@@ -1,6 +1,6 @@
 import React, { ReactElement, useCallback, useMemo } from 'react';
-import { StyleSheet, TouchableOpacity, View, Text } from 'react-native';
-import { DayType, ThemeType, DayDot, DayTheme } from '../../types';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { DayDot, DayTheme, DayType, ThemeType } from '../../types';
 import Dot from '../Dot';
 
 const styles = StyleSheet.create({
@@ -132,6 +132,7 @@ interface Props {
   dayTheme?: DayTheme;
   item: DayType;
   theme: ThemeType;
+  selectedDate?: Date;
   renderDayContent?: (day: DayType) => ReactElement;
 }
 
@@ -149,6 +150,7 @@ const Day = React.memo<Props>(
         isToday,
         isWeekend,
         isHidden,
+        isSelected,
       },
       dots = [],
       dayTheme,
@@ -221,6 +223,7 @@ const Day = React.memo<Props>(
           isEndDate ? styles.endDate : {},
           isEndDate ? theme.endDateContainerStyle : {},
           isEndDate ? dayTheme?.endDateContainerStyle : {},
+          isSelected ? dayTheme?.selectedDateContainerStyle : {},
         ]}
         onPress={() => props.onPress(props.item.date)}
       >
@@ -236,6 +239,7 @@ const Day = React.memo<Props>(
               isWeekend ? dayTheme?.weekendContentStyle : {},
               isActive ? theme.activeDayContentStyle : {},
               isActive ? dayTheme?.activeDayContentStyle : {},
+              isSelected ? dayTheme?.selectedDateContentStyle : {},
             ]}
           >
             <Text
@@ -248,6 +252,7 @@ const Day = React.memo<Props>(
                 isToday ? dayTheme?.todayTextStyle : {},
                 isActive ? theme.activeDayTextStyle : {},
                 isActive ? dayTheme?.activeDayTextStyle : {},
+                isSelected ? dayTheme?.selectedDateTextStyle : {},
               ]}
             >
               {date.getDate()}

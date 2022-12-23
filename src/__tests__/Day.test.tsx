@@ -1,5 +1,5 @@
+import { fireEvent, render, screen } from '@testing-library/react-native';
 import * as React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react-native';
 import Day from '../components/Day';
 
 const defaultDay = {
@@ -15,6 +15,7 @@ const defaultDay = {
   isWeekend: false,
   isOutOfRange: false,
   isHidden: false,
+  isSelected: false,
 };
 
 describe('Day', () => {
