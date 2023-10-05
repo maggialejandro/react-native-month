@@ -1,6 +1,6 @@
 {
   "name": "react-native-month",
-  "version": "1.5.2",
+  "version": "1.6.0",
   "description": "React Native Month",
   "main": "lib/commonjs/index.js",
   "react-native": "src/index.tsx",
