@@ -6,20 +6,6 @@ const SATURDAY = 6;
 const SUNDAY = 0;
 const MONDAY_FIRST = [6, 0, 1, 2, 3, 4, 5];
 
-function dayShouldBeActive(
-  date: Date,
-  startDate: Date,
-  endDate: Date,
-  firstDayOfMonth: Date,
-  lastDayOfMonth: Date
-) {
-  if (date > lastDayOfMonth) {
-    return endDate > lastDayOfMonth && startDate <= lastDayOfMonth;
-  }
-
-  return startDate < firstDayOfMonth && endDate >= firstDayOfMonth;
-}
-
 export function getMonthDays(
   month: number,
   year: number,
@@ -39,7 +25,6 @@ export function getMonthDays(
   if (endDate instanceof Date) endDate.setHours(0, 0, 0, 0);
 
   const firstMonthDay = new Date(year, month, 1);
-  const lastMonthDay = new Date(year, month + 1, 0);
 
   const daysToAdd = getNumberOfDaysInMonth(month, year);
   const days: DayType[] = [];
@@ -83,18 +68,7 @@ export function getMonthDays(
     if (endDate && startDate && !disableRange) {
       isStartDate = isMonthDate && sameDate(date, startDate);
       isEndDate = isMonthDate && sameDate(date, endDate);
-
-      if (!isMonthDate) {
-        isActive = dayShouldBeActive(
-          date,
-          startDate,
-          endDate,
-          firstMonthDay,
-          lastMonthDay
-        );
-      } else {
-        isActive = date >= startDate && date <= endDate;
-      }
+      isActive = date >= startDate && date <= endDate;
     } else if (isMonthDate && startDate && sameDate(date, startDate)) {
       isStartDate = true;
       isEndDate = true;
