@@ -29,7 +29,7 @@ yarn add react-native-month
 | **`maxDate`**           | Maximum date that can be selected.     | no                     | null    | Date             |
 | **`startDate`**         | Selected start date                    | no                     | null    | Date             |
 | **`endDate`**           | Selected end date                      | requires _startDate_   | null    | Date             |
-| **`theme`**             | Calendar StyleSheet                    | no                     | null    | Object           |
+| **`theme`**             | Calendar StyleSheet                    | no                     | null    | ThemeType        |
 | **`locale`**            | Calendar language                      | es, en, fr, br, zh, ru | 'en'    | LocaleType       |
 | **`showWeekdays`**      | Show Week columns                      | no                     | true    | boolean          |
 | **`firstDayMonday`**    | Monday as first day of the week        | no                     | false   | boolean          |

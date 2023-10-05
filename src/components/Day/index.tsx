@@ -178,7 +178,7 @@ const Day = React.memo<Props>(
     );
 
     if (isHidden) {
-      return <View style={styles.container} />;
+      return <View style={[styles.container, theme.hiddenDayContainerStyle]} />;
     }
 
     if (!isVisible) {

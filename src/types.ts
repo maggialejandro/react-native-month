@@ -8,6 +8,7 @@ export interface DayTheme {
   activeDayContainerStyle?: ViewStyle;
   activeDayContentStyle?: ViewStyle;
   activeDayTextStyle?: TextStyle;
+  hiddenDayContainerStyle?: ViewStyle;
   dayContainerStyle?: ViewStyle;
   dayContentStyle?: ViewStyle;
   dayOutOfRangeContainerStyle?: ViewStyle;
