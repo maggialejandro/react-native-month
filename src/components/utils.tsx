@@ -68,7 +68,12 @@ export function getMonthDays(
     if (endDate && startDate && !disableRange) {
       isStartDate = isMonthDate && sameDate(date, startDate);
       isEndDate = isMonthDate && sameDate(date, endDate);
-      isActive = date >= startDate && date <= endDate;
+
+      if (!isMonthDate) {
+        isActive = false;
+      } else {
+        isActive = date >= startDate && date <= endDate;
+      }
     } else if (isMonthDate && startDate && sameDate(date, startDate)) {
       isStartDate = true;
       isEndDate = true;
