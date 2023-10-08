@@ -260,6 +260,7 @@ const Day = React.memo<Props>(
   },
   (prevProps, nextProps) => {
     return (
+      prevProps.onPress === nextProps.onPress &&
       prevProps.item.isActive === nextProps.item.isActive &&
       prevProps.item.isVisible === nextProps.item.isVisible &&
       prevProps.item.isStartDate === nextProps.item.isStartDate &&
