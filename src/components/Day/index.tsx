@@ -265,7 +265,8 @@ const Day = React.memo<Props>(
       prevProps.item.isVisible === nextProps.item.isVisible &&
       prevProps.item.isStartDate === nextProps.item.isStartDate &&
       prevProps.item.isEndDate === nextProps.item.isEndDate &&
-      prevProps.renderDayContent === nextProps.renderDayContent
+      prevProps.renderDayContent === nextProps.renderDayContent &&
+      prevProps.dots?.length === nextProps.dots?.length
     );
   }
 );
