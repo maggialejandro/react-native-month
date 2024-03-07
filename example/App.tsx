@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { View, StatusBar, SafeAreaView } from 'react-native';
-import { Month, ThemeType, MarkedDays } from 'react-native-month';
+import { DateString, Month, ThemeType, MarkedDays } from 'react-native-month';
 
 const BLUE = '#6d95da';
 
@@ -87,17 +87,17 @@ const markedDays: MarkedDays = {
 };
 
 const INITIAL_STATE = {
-  startDate: new Date(2022, 9, 11),
-  endDate: new Date(2022, 9, 12),
-  minDate: new Date(2022, 9, 6),
-  maxDate: new Date(2022, 9, 20),
+  startDate: '2022-09-11',
+  endDate: '2022-09-12',
+  minDate: '2022-09-06',
+  maxDate: '2022-09-20',
 };
 
 const App = () => {
-  const [startDate, setStartDate] = useState<Date | undefined>(
+  const [startDate, setStartDate] = useState<DateString | undefined>(
     INITIAL_STATE.startDate
   );
-  const [endDate, setEndDate] = useState<Date | undefined>(
+  const [endDate, setEndDate] = useState<DateString | undefined>(
     INITIAL_STATE.endDate
   );
 
@@ -130,8 +130,8 @@ const App = () => {
         }}
       >
         <Month
-          month={startDate.getMonth()}
-          year={startDate.getFullYear()}
+          month={8}
+          year={2022}
           onPress={handleChangeDate}
           theme={THEME}
           showWeekdays

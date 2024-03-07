@@ -1,10 +1,14 @@
-import { LocaleType } from '../types';
+import { DateString, LocaleType } from '../types';
 import { leapYear } from './validations';
 
 export function addDays(date: Date, days: number): Date {
   const result = new Date(date);
   result.setDate(result.getDate() + days);
   return result;
+}
+
+export function getDayFromDateString(date: DateString) {
+  return parseInt(date.split('-')[2], 10);
 }
 
 export function getNumberOfDaysInMonth(month: number, year: number) {

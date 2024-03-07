@@ -6,4 +6,10 @@ export { default as Day } from './components/Day';
 
 export { getWeekdayNames, getMonthNames, getDayNames } from './utils/date';
 
-export type { MonthProps, ThemeType, LocaleType, MarkedDays } from './types';
+export type {
+  DateString,
+  MonthProps,
+  ThemeType,
+  LocaleType,
+  MarkedDays,
+} from './types';

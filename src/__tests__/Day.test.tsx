@@ -5,7 +5,7 @@ import Day from '../components/Day';
 const defaultDay = {
   id: '1',
   key: '1-1',
-  date: new Date(),
+  date: '2024-01-01',
   isToday: false,
   isActive: false,
   isMonthDate: true,
@@ -18,8 +18,7 @@ const defaultDay = {
 };
 
 describe('Day', () => {
-  it('should render today', () => {
-    const today = new Date();
+  it('should render day', () => {
     const props = {
       theme: {},
       onPress: () => {},
@@ -31,7 +30,7 @@ describe('Day', () => {
 
     const { unmount } = render(<Day {...props} />);
 
-    expect(screen.getByText(today.getDate().toString())).toBeTruthy();
+    expect(screen.getByText('1')).toBeTruthy();
 
     unmount();
   });

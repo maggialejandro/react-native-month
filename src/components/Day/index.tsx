@@ -1,7 +1,8 @@
 import React, { ReactElement, useCallback, useMemo } from 'react';
 import { StyleSheet, TouchableOpacity, View, Text } from 'react-native';
-import { DayType, ThemeType, DayDot, DayTheme } from '../../types';
+import { DayType, ThemeType, DayDot, DayTheme, DateString } from '../../types';
 import Dot from '../Dot';
+import { getDayFromDateString } from '../../utils/date';
 
 const styles = StyleSheet.create({
   activeDate: {
@@ -32,7 +33,7 @@ const styles = StyleSheet.create({
 });
 
 interface NonTouchableDayProps {
-  date: Date;
+  date: DateString;
   isActive: boolean;
   isMonthDate: boolean;
   isOutOfRange: boolean;
@@ -110,7 +111,7 @@ const NonTouchableDay = React.memo<NonTouchableDayProps>(
               isOutOfRange ? dayTheme?.dayOutOfRangeTextStyle : {},
             ]}
           >
-            {date.getDate()}
+            {getDayFromDateString(date)}
           </Text>
         </View>
       </View>
@@ -127,7 +128,7 @@ const NonTouchableDay = React.memo<NonTouchableDayProps>(
 );
 
 interface Props {
-  onPress: (date: Date) => void;
+  onPress: (date: DateString) => void;
   dots?: DayDot[];
   dayTheme?: DayTheme;
   item: DayType;
@@ -250,7 +251,7 @@ const Day = React.memo<Props>(
                 isActive ? dayTheme?.activeDayTextStyle : {},
               ]}
             >
-              {date.getDate()}
+              {getDayFromDateString(date)}
             </Text>
             <View style={styles.dotsContainer}>{finalDots.map(renderDot)}</View>
           </View>

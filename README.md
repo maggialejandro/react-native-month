@@ -20,15 +20,17 @@ yarn add react-native-month
 
 ## Usage
 
+See example folder
+
 ## API
 
 | Prop                    | Description                            | Required?              | Default | Type             |
 | ----------------------- | -------------------------------------- | ---------------------- | ------- | ---------------- |
 | **`onPress`**           | Callback called when a day is pressed. | yes                    |         | Function         |
-| **`minDate`**           | Minimum date that can be selected.     | no                     | null    | Date             |
-| **`maxDate`**           | Maximum date that can be selected.     | no                     | null    | Date             |
-| **`startDate`**         | Selected start date                    | no                     | null    | Date             |
-| **`endDate`**           | Selected end date                      | requires _startDate_   | null    | Date             |
+| **`minDate`**           | Minimum date that can be selected.     | no                     | null    | 'YYYY-MM-DD'     |
+| **`maxDate`**           | Maximum date that can be selected.     | no                     | null    | 'YYYY-MM-DD'     |
+| **`startDate`**         | Selected start date                    | no                     | null    | 'YYYY-MM-DD'     |
+| **`endDate`**           | Selected end date                      | requires _startDate_   | null    | 'YYYY-MM-DD'     |
 | **`theme`**             | Calendar StyleSheet                    | no                     | null    | ThemeType        |
 | **`locale`**            | Calendar language                      | es, en, fr, br, zh, ru | 'en'    | LocaleType       |
 | **`showWeekdays`**      | Show Week columns                      | no                     | true    | boolean          |

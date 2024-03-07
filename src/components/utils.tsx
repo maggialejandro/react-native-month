@@ -1,6 +1,6 @@
 import { addDays, getNumberOfDaysInMonth } from '../utils/date';
-import { changedDate, changeMarkedDays, sameDate } from '../utils/validations';
-import { MonthProps, DayType } from '../types';
+import { changeMarkedDays } from '../utils/validations';
+import { MonthProps, DayType, DateString } from '../types';
 
 const SATURDAY = 6;
 const SUNDAY = 0;
@@ -13,17 +13,12 @@ export function getMonthDays(
   disableRange: boolean,
   disabledDays: { [key: string]: any },
   disableOffsetDays: boolean,
-  startDate?: Date,
-  endDate?: Date,
-  minDate?: Date,
-  maxDate?: Date,
+  startDate?: DateString,
+  endDate?: DateString,
+  minDate?: DateString,
+  maxDate?: DateString,
   showSixWeeks?: boolean
 ): DayType[] {
-  if (minDate instanceof Date) minDate.setHours(0, 0, 0, 0);
-  if (maxDate instanceof Date) maxDate.setHours(0, 0, 0, 0);
-  if (startDate instanceof Date) startDate.setHours(0, 0, 0, 0);
-  if (endDate instanceof Date) endDate.setHours(0, 0, 0, 0);
-
   const firstMonthDay = new Date(year, month, 1);
 
   const daysToAdd = getNumberOfDaysInMonth(month, year);
@@ -48,17 +43,17 @@ export function getMonthDays(
     const fullDay = day < 10 ? `0${day}` : day.toString();
     const fullMonth =
       localMonth < 9 ? `0${localMonth + 1}` : (localMonth + 1).toString();
-    const id = `${date.getFullYear()}-${fullMonth}-${fullDay}`;
+    const dateString = `${date.getFullYear()}-${fullMonth}-${fullDay}`;
 
     let isOnSelectableRange = !minDate && !maxDate;
 
     isOnSelectableRange =
-      (!minDate || (minDate && date >= minDate)) &&
-      (!maxDate || (maxDate && date <= maxDate));
+      (!minDate || (!!minDate && dateString >= minDate)) &&
+      (!maxDate || (!!maxDate && dateString <= maxDate));
 
     const isOutOfRange = !!(
-      (minDate && date < minDate) ||
-      (maxDate && date > maxDate)
+      (minDate && dateString < minDate) ||
+      (maxDate && dateString > maxDate)
     );
     const isMonthDate = i >= 0 && i < daysToAdd;
     let isStartDate = false;
@@ -66,15 +61,15 @@ export function getMonthDays(
     let isActive = false;
 
     if (endDate && startDate && !disableRange) {
-      isStartDate = isMonthDate && sameDate(date, startDate);
-      isEndDate = isMonthDate && sameDate(date, endDate);
+      isStartDate = isMonthDate && dateString === startDate;
+      isEndDate = isMonthDate && dateString === endDate;
 
       if (!isMonthDate) {
         isActive = false;
       } else {
-        isActive = date >= startDate && date <= endDate;
+        isActive = dateString >= startDate && dateString <= endDate;
       }
-    } else if (isMonthDate && startDate && sameDate(date, startDate)) {
+    } else if (isMonthDate && startDate && dateString === startDate) {
       isStartDate = true;
       isEndDate = true;
       isActive = true;
@@ -89,9 +84,9 @@ export function getMonthDays(
       year === today.getFullYear();
 
     days.push({
-      key: `${localMonth}-${id}`,
-      id: id,
-      date,
+      key: `${localMonth}-${dateString}`,
+      id: dateString,
+      date: dateString,
       isToday,
       isWeekend,
       isMonthDate,
@@ -99,7 +94,8 @@ export function getMonthDays(
       isStartDate,
       isEndDate,
       isOutOfRange,
-      isVisible: isOnSelectableRange && isMonthDate && !disabledDays[id],
+      isVisible:
+        isOnSelectableRange && isMonthDate && !disabledDays[dateString],
       isHidden: disableOffsetDays && !isMonthDate,
     });
   }
@@ -118,9 +114,9 @@ export function areEqual(prevProps: MonthProps, nextProps: MonthProps) {
     prevProps.disableOffsetDays === nextProps.disableOffsetDays &&
     prevProps.firstDayMonday === nextProps.firstDayMonday &&
     !changeMarkedDays(prevProps.markedDays, nextProps.markedDays) &&
-    !changedDate(prevProps.startDate, nextProps.startDate) &&
-    !changedDate(prevProps.endDate, nextProps.endDate) &&
-    !changedDate(prevProps.minDate, nextProps.minDate) &&
-    !changedDate(prevProps.maxDate, nextProps.maxDate)
+    prevProps.startDate === nextProps.startDate &&
+    prevProps.endDate === nextProps.endDate &&
+    prevProps.minDate === nextProps.minDate &&
+    prevProps.maxDate === nextProps.maxDate
   );
 }
