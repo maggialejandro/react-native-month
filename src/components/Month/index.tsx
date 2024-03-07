@@ -5,6 +5,7 @@ import { getDayNames } from '../../utils/date';
 import { getMonthDays, areEqual } from '../utils';
 import WeekDays from '../WeekDays';
 import Day from '../Day';
+import { isValidDate } from '../../utils/validations';
 
 const styles = StyleSheet.create({
   weekContainer: {
@@ -33,6 +34,19 @@ export default React.memo<MonthProps>((props: MonthProps) => {
     renderDayContent,
     showSixWeeks = false,
   } = props;
+
+  if (startDate && !isValidDate(startDate)) {
+    console.error('Invalid startDate format, should be a string YYYY-MM-DD');
+  }
+  if (endDate && !isValidDate(endDate)) {
+    console.error('Invalid endDate format, should be a string YYYY-MM-DD');
+  }
+  if (minDate && !isValidDate(minDate)) {
+    console.error('Invalid minDate format, should be a string YYYY-MM-DD');
+  }
+  if (maxDate && !isValidDate(maxDate)) {
+    console.error('Invalid maxDate format, should be a string YYYY-MM-DD');
+  }
 
   const DAY_NAMES =
     Array.isArray(dayNames) && dayNames.length === 7

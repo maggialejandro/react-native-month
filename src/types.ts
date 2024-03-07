@@ -3,6 +3,11 @@ import { ViewStyle, TextStyle } from 'react-native';
 
 export type LocaleType = 'es' | 'en' | 'fr' | 'br' | 'zh' | 'ru' | 'uk';
 
+/**
+ * Format: YYYY-MM-DD
+ */
+export type DateString = string;
+
 export interface DayTheme {
   activeDayColor?: string;
   activeDayContainerStyle?: ViewStyle;
@@ -53,7 +58,7 @@ export type DayDot = {
 };
 
 export type DayType = {
-  date: Date;
+  date: DateString;
   id: string;
   key: string;
   isActive: boolean;
@@ -95,9 +100,9 @@ export interface MonthProps {
    * Day pressed callback
    *
    * @memberof MonthProps
-   * @returns {Date}
+   * @returns {DateString}
    */
-  onPress: (date: Date) => void;
+  onPress: (date: DateString) => void;
 
   locale?: LocaleType;
   dayNames?: string[];
@@ -137,10 +142,10 @@ export interface MonthProps {
    * @memberof MonthProps
    */
   firstDayMonday?: boolean;
-  startDate?: Date;
-  endDate?: Date;
-  minDate?: Date;
-  maxDate?: Date;
+  startDate?: DateString;
+  endDate?: DateString;
+  minDate?: DateString;
+  maxDate?: DateString;
   markedDays?: MarkedDays;
   showSixWeeks?: boolean;
   theme?: ThemeType;
